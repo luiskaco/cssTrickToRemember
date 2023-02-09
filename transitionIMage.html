@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       #container {
+            position: relative;
+        }
+
+        #image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            transition: opacity 300ms;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <img id="image" src="https://picsum.photos/id/237/200/300">
+      </div>
+
+
+      <script>
+        const container = document.getElementById("container");
+        let image = document.getElementById("image");
+        const images = ["https://picsum.photos/id/231/200/300", "https://picsum.photos/id/232/200/300", "https://picsum.photos/id/233/200/300", "https://picsum.photos/id/234/200/300"];
+        let currentImage = 0;
+
+        function changeImage() {
+        if (currentImage >= images.length) {
+            return;
+        }
+
+        const newImage = new Image();
+        newImage.src = images[currentImage];
+
+        newImage.addEventListener("load", function() {
+            image.style.opacity = 1;
+        });
+
+        setTimeout(function() {
+            container.removeChild(image);
+            container.appendChild(newImage);
+            image = newImage;
+            currentImage++;
+            changeImage();
+        }, 2000);
+        }
+
+        changeImage();
+      </script>
+</body>
+</html>

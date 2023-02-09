@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+body {
+    height: 5600px;
+    background-color: red;
+}
+        #header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+#header.shrink {
+  background-color: #fff;
+
+  padding: 5px;
+}
+
+#header.shrink ul li{
+    color: #333 !important;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar li {
+  margin: 0 10px;
+}
+
+#navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav id="navbar">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+
+      <script>
+        window.onscroll = function() {
+  var header = document.getElementById("header");
+  if (window.pageYOffset > 50) {
+    header.classList.add("shrink");
+  } else {
+    header.classList.remove("shrink");
+  }
+};
+      </script>
+</body>
+</html>
