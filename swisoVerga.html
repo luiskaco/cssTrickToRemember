@@ -1,61 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SWISO VERGA</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
 
     <style>
+
+        @import 'https://use.fontawesome.com/releases/v5.15.2/css/all.css';
         .container{
             width: min(95%, 1200px);/* minimo es 95 max es 120rem*/
             margin-inline: auto;  
-        }   
+        }
+        
+        .text-bold{
+            font-weight: bold;
+        }
 
         /*LA LOCANDA*/
         .lalocanda__content {
             text-align: center;
-            margin: 2rem 1rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 35rem;
         }
 
-            @media(min-width:768px){
+            @media(min-width:767px){
                     .lalocanda__content {
-                        display: flex;
-                        justify-content: center;
-                        flex-direction: column;
-                        align-items: center;
-                        height: 400px;
-                        display: flex;
-                        margin: 1rem 4rem;
+                        height: 35rem;
+                    
+                     
                     }
             }
 
         .locanda--bg{
-            background-color: #f8f8f8;
-            border-bottom: 2px solid red;
+            background-image: url(https://www.swissotellima.com.pe/wp-content/uploads/2023/02/background-1.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+   
         }
+     
 
         .lalocanda__content h1 {
             font-family: 'NewYork', Arial, Sans-serif;
-            font-size: 1.4rem;
+            font-size: 1.1rem ;
             text-align: center;
-            font-weight: bold;
             line-height: 1.2;
             color:#1D1D1B;
+            font-weight: normal;
             margin: 0;
+          
         }
 
-            @media(min-width:768px){
+            @media(min-width:767px){
                 .lalocanda__content h1 {
                     font-size: 2.4rem;
+                    padding: 0 80px;
                 }
             }
+
+        .lalocanda__content img {
+            margin-bottom: 1.5rem;
+        }
         
         /*tazon*/
         .mug--bg {
-            background-color: #f8f8f8;
-            border-bottom: 2px solid red;
+            
+            background-image: url(https://www.swissotellima.com.pe/wp-content/uploads/2023/02/Background-Seccion2.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
         }
 
         .mug__content {
@@ -67,7 +86,7 @@
             align-items: center;
         }
 
-            @media(min-width:768px){
+            @media(min-width:767px){
                 .mug__content {
                     height: 100vh;
                     grid-template-columns: repeat(2, 1fr);
@@ -85,7 +104,7 @@
             color:#1D1D1B;
         }
 
-            @media(min-width:768px){
+            @media(min-width:767px){
                 .mug__content h2{ 
                     font-size: 1.5rem;
                 }
@@ -100,7 +119,7 @@
             color:#1D1D1B;
         }
 
-            @media(min-width:768px){
+            @media(min-width:767px){
                 .mug__content p{
                     font-size: 1.2rem;
                 }
@@ -124,7 +143,7 @@
             
         }
 
-            @media(min-width:768px){
+            @media(min-width:767px){
                 .mug__content .mug__btn a {
                     font-size: 1.7rem;
                 }
@@ -135,25 +154,58 @@
             
         }
 
+        .mug__content img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
         /* card galerie */
+
+        .pictures--bg {
+            background-image: url(https://www.swissotellima.com.pe/wp-content/uploads/2023/02/Background-Seccion2.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
         .pictures__content {
             padding: 4rem 0;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             gap: 3rem;
+            place-content: center;
+            
+            height: auto;
        }
+
+            @media(min-width:767px){
+                .pictures__content {
+                    grid-template-columns: repeat(4, 1fr);  
+                    height: 30rem;
+                }
+            } 
 
         .pictures__card {
             position: relative;
             overflow: hidden;
+            
         }
 
         .pictures__card img {
             display: block;
-            height: 20rem;
+        
+            height: 100%;
+            width: 100%;
             object-fit: cover;
             transition: transform 300ms ease;
+        }
+
+        @media(min-width:767px){
+            .pictures__card img {
+                height: 20rem;
+            }
+
         }
 
         .pictures__card:hover img {
@@ -170,38 +222,60 @@
             height: 100%;
             background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, 0.7) 100%);
             z-index: 1;
-            opacity: 0;
+            opacity: 1;
             transition: opacity 300ms ease;
         }
+
+            @media(min-width:767px){
+                .pictures__card::before {
+                    opacity: 0;
+                }
+            }
 
         .pictures__card:hover::before {
              opacity: 1;
         }
 
         .pictures__cardContent {
+         
             text-align: center;
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 2rem;
+            padding: 1rem;
             color: #fff;
+            
             z-index: 2;
-            opacity: 0;
+            opacity: 1;
         }
+
+            @media(min-width:767px) {
+                .pictures__cardContent {
+                    opacity: 0;
+                }
+            }
+     
 
         .pictures__card:hover .pictures__cardContent {
             opacity: 1;
         }
+      
+
+        .pictures__cardContent h3, .pictures__cardContent p  {
+             margin: 0;
+             color: #fff;
+             font-family: 'NewYork', Arial, Sans-serif;
+        }
 
         .pictures__cardContent h3 {
-        margin: 0;
+            font-size: 1rem;
+            margin-bottom: 8px;
         }
 
         .pictures__cardContent p {
-        margin: 0;
+            font-size: .9rem;
         }
-
 
         .arrow-down {
             display: flex;
@@ -222,11 +296,11 @@
     
  <div class="locanda--bg ">
     <main class="container lalocanda">
-       <div class="lalocanda__content">
+       <div class="lalocanda__content" >
             <img src="https://www.swissotellima.com.pe/wp-content/uploads/2022/10/logo_laLocanda_verde.png"
-             alt="" />
+             alt="logo verde de la locanda" />
             <h1>
-                Tradición y los mejores insumos de la Europa Mediterránea
+                Tradición y los mejores insumos de la <span class="text-bold">Europa Mediterránea</span>
                     en una propuesta gastronómica creada para conquistar los
                     más selectos paladares
             </h1>   
@@ -234,11 +308,12 @@
     </main>
   
 </div>
+
 <div class="mug--bg">
     <div class="container mug">
          <div class="mug__content">
             <div>
-                <img src="https://picsum.photos/id/200/526/499" alt=""> 
+                <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/Plato-Locanda.png" alt="Imagen de comida"> 
             </div>
       
             <div>
@@ -262,17 +337,18 @@
                
           
           </div>
+        </div>
     </div>
-  
 </div>
+
 <div class="pictures--bg">
     <div class="container pictures">
          <div class="pictures__content">
             <div class="pictures__card">
-                <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/DulcesdeAmor-2.jpg" alt="" >
+                <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/Card-1-Plato.jpg" alt="plato de Atún mediterráneo " >
                 <div class="pictures__cardContent">
                     <h3>Atún mediterráneo</h3>
-                    ´<p>Sellado a la plancha, servido sobre
+                    <p>Sellado a la plancha, servido sobre
                         socca, con emulsión de caponata
                         y un consomé de garbanzo
                         aromatizado con dashi de atún.</p>
@@ -284,35 +360,39 @@
                 </div>
             </div>
             <div class="pictures__card">
-                <img src="https://picsum.photos/id/200/273/316" alt="" >
+                <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/Card-2-Plato.jpg" alt="Plato de Ensalada Griega" >
                 <div class="pictures__cardContent">
-                    <h3>Atún mediterráneo</h3>
-                    ´<p>Sellado a la plancha, servido sobre
-                        socca, con emulsión de caponata
-                        y un consomé de garbanzo
-                        aromatizado con dashi de atún.</p>
+                    <h3>Ensalada Griega</h3>
+                    <p>Una refrescante ensalada de aceitunas, queso fela, cebolla, pepinos y tomates cereza, aderezada con vinagreta de yogurt.</p>
+                   
+                        <div class="arrow-down">
+                            <i class="fas fa-angle-down"></i>
+                         </div>
+                    
                 </div>
             </div>
             <div class="pictures__card">
-                <img src="https://picsum.photos/id/200/273/316" alt="" >
+                <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/Card-3-Plato.jpg" alt="Plato Pesca del día en condimento negro" >
                 <div class="pictures__cardContent">
-                    <h3>Atún mediterráneo</h3>
-                    ´<p>Sellado a la plancha, servido sobre
-                        socca, con emulsión de caponata
-                        y un consomé de garbanzo
-                        aromatizado con dashi de atún.</p>
-                        <img src="" alt="">
+                    <h3>Pesca del día en condimento negro</h3>
+                    <p>Condimento a base de soya, tinta de calamar, salsa worcestershire, tapioca y regaliz, servido con apapas cocotte y vegetales a la plancha.</p>
+                   
+                        <div class="arrow-down">
+                            <i class="fas fa-angle-down"></i>
+                         </div>
+                    
                 </div>
             </div>
             <div class="pictures__card">
-                <img src="https://picsum.photos/id/200/273/316" alt="" >
+                <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/Card-4-Plato.jpg" alt="Plato de Charlotte de mango" >
                 <div class="pictures__cardContent">
-                    <h3>Atún mediterráneo</h3>
-                    ´<p>Sellado a la plancha, servido sobre
-                        socca, con emulsión de caponata
-                        y un consomé de garbanzo
-                        aromatizado con dashi de atún.</p>
-                        <img src="" alt="">
+                    <h3>Charlotte de mango</h3>
+                    <p>Con cubitos de mango al interior, mousse y gelée de mango.</p>
+                   
+                        <div class="arrow-down">
+                            <i class="fas fa-angle-down"></i>
+                         </div>
+                    
                 </div>
             </div>
       
