@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWISO Deli-corner </title>
+    <style>
+        /*LOGO 
+    
+        */
+        
+        /* body{
+            margin:0;
+        } */
+
+        /* @import 'https://use.fontawesome.com/releases/v5.15.2/css/all.css'; */
+        .container{
+            width: min(95%, 1200px);/* minimo es 95 max es 120rem*/
+            margin-inline: auto;  
+        }
+
+        h1, h2, h3 {
+            letter-spacing: unset !important;
+        }
+         
+      .text-bold{
+         font-weight: bold;
+      }
+
+      .hero--bg {
+            background-size:cover;
+            background-repeat: no-repeat;
+          background-position: top ;
+          background-image:url(https://www.swissotellima.com.pe/wp-content/uploads/2023/02/bgMovilDeliCorner.jpg);
+      }
+
+      @media(min-width:768px){
+          .hero--bg {
+              background-size:cover;
+              background-position: top;
+              background-repeat: no-repeat;
+              background-image:url(https://www.swissotellima.com.pe/wp-content/uploads/2023/02/bgDesktopDeliCorner.jpg);
+              /* background-image:url(/banner\ 1920x1080.jpg); */
+          }
+      }
+
+      .hero{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 1rem;
+            height:100vh;
+
+            margin-left: 50px;
+        
+      }
+
+      @media(min-width:768px) {
+            .hero {
+                
+            }
+      }
+
+      .hero img{
+            display: block;
+            max-width: 100%;
+            height: auto;
+            width: 50%;
+      }
+      
+       @media(min-width:768px) {
+               .hero img{
+                display: block;
+                max-width: 100%;
+                height: auto;
+                width: 20%;
+          }
+       }
+
+      .hero h2, .hero p{
+            font-family: 'Fogtwono5', Arial, Sans-serif;
+            margin:0;
+      }
+
+      .hero h2 {
+            font-size: 1.8rem;
+            line-height: 1.2;
+            color: #fff;
+
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+      }
+
+      @media(min-width:768px){
+        .hero h2 {
+            font-size: 4rem;
+        }
+      }
+
+      .hero p {
+            font-size: .8rem;
+            color: #fff;
+
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            line-height: 1.2;
+
+      }
+
+      @media(min-width:768px){
+        .hero p{
+            font-size: 2.6rem;
+        }
+      }
+
+      /*  deli  */
+      .deli--bg {
+            background-image: url(https://www.swissotellima.com.pe/wp-content/uploads/2023/02/background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+      }
+
+      .deli {
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     
+      }
+
+      @media(min-width:768px){
+        .deli {
+            padding: 0 4rem;
+        }
+      }
+
+      .deli h1{
+         font-family: 'Fogtwono5', Arial, Sans-serif;
+         text-align: center;
+         font-size: 1.4rem;
+         line-height: 1.2;
+         color: #C28C73;
+
+         -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+      }
+
+      @media(min-width:768px){
+        .deli h1{
+           font-size: 2rem
+        }
+      }
+
+      /* cake */
+      .cake{
+         display: grid;
+         grid-template-columns: repeat(1, 1fr);
+         gap: 2rem;
+         /* height: 100vh; */
+         position: relative;
+      }
+      
+      @media(min-width:768px){
+        .cake{
+            grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .cake_box {
+        position: relative;
+      }
+
+      @media(max-width:425px){
+        .cake_box {
+            margin-bottom: 3rem;
+        }
+      }
+
+      .cake_box .cake_picture {
+    
+        background-color:  #FFFDF3 ;
+        overflow: hidden;
+
+        transition: .3s  box-shadow ease-in-out ;
+
+      }
+
+      .cake_box .cake_picture::after {
+            content:"";
+            display: block;
+            height: 20px;
+            width: 80%;
+            background-color: #C18B72;
+            z-index: 5;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+  
+      }
+   
+      .cake_box:hover .cake_picture {
+        box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.25);
+-webkit-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.25);
+      }
+   
+      .cake_box .cake_picture img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            width: 100%;
+            transition: .3s  transform ease-in-out ;
+      }
+
+      .cake_box:hover .cake_picture img{
+        transform: scale(1.1);
+      }
+
+      .cake_box .cake_content {
+            padding: 0 30px;
+      }
+
+      .cake_box .cake_content h2,  .cake_box .cake_content p  {
+        font-family: 'Fogtwono5', Arial, Sans-serif;
+        margin:0;
+        text-align: center;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+
+      }
+
+      .cake_box .cake_content h2 {
+          color:  #963A15;
+          padding-top: 20px;
+          font-size: 2.2rem;
+          text-transform: uppercase;
+      } 
+
+      .cake_box .cake_content p {
+            color:  #963A15;
+            padding-top: 15px;
+            font-size: 1.5;
+      }
+
+      .cake_price {
+            margin-top: 3rem;
+            text-align: center; 
+      }
+
+      .cake_box:nth-child(2) .cake_price{
+            border-right: 1px solid #963A15;
+            border-left: 1px solid #963A15;
+      }
+
+      .cake_price ul { 
+            list-style: none;
+            padding-inline-start: 0px;
+      }
+
+      .cake_price ul li {
+    
+      }
+
+      .cake_price ul li:nth-child(2){
+             margin-top: 10px;
+      }
+
+      .cake_price ul li span:nth-child(1){
+            display: block;
+            color:  #963A15;
+            font-family: 'Fogtwono5', Arial, Sans-serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+      }
+
+      .cake_price ul li  span:nth-child(2){
+            display: block;
+            margin-top: 5px;
+            color:  #963A15;
+            font-family: 'Fogtwono5', Arial, Sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+      }
+
+      /* RESERVE */
+      
+      .cakeReserve {
+        margin-top: 6rem;
+        text-align: center;
+       
+      }
+
+
+      @media(min-width:768px){
+        .cakeReserve {
+            margin-top: 14rem;
+           
+        
+        }
+      }
+
+      .cakeReserve a {
+            text-decoration: none;
+            font-size: 3rem;
+            background-color:#C18B72;
+            font-weight: bold;
+            font-family: 'Fogtwono5', Arial, Sans-serif;
+            padding: 10px 20px;
+            color:#fff;
+            transition: .3s  background-color ease-in-out;
+      }
+
+      .cakeReserve a:hover {
+            background-color: #e6885d;
+      }
+
+
+
+  </style>
+</head>
+<body>
+    <div class="hero--bg">
+        <div class="container">
+            <div class="hero">
+                <div>
+                    <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/logo.png" alt="imagen de logo">
+                </div>
+                <div>
+                    <h2>Endulzando momentos</h2>
+                    <p>Ahora tus tortas favoritas <span class="st"></span> justo a la medida</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="deli--bg">
+        <main class="container">
+           <div class="deli" >
+                <h1>
+                    ¡Deléitate con nuestras deliciosas tortas divididas en la medida
+                    perfecta para ti! Ya sea que necesites una torta pequeña para
+                    una cena íntima, o una torta grande para celebrar una ocasión
+                    especial, te ofrecemos opciones para todos los tamaños:
+                </h1>   
+            </div>
+        </main>
+
+
+        <div class="container">
+            <div class="cake">
+                <div class="cake_box">
+                    
+                    <div class="cake_picture">
+                        <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/sacher.jpg" alt="Imagen de sacher">
+                      
+                    </div>
+
+                    <div class="cake_content">
+                        <h2>Torta Sacher</h2>
+                        <p>Bizcocho de chocolate amargo,
+                            mermelada de albaricoque, ganache
+                            y baño de chocolate, decoración de
+                            placas de chocolate.</p>
+                    </div>
+
+                    <div class="cake_price">
+                        <ul>
+                            <li>
+                                <span>12 porciones</span>  
+                                <span>S/ 99.00</span>    
+                            </li>
+                            <li>
+                                <span>5 porciones</span>  
+                                <span>S/ 50.00</span>    
+                            </li>
+                        </ul>
+                    </div>
+
+                </div> <!-- end cake box-->
+
+                <div class="cake_box">
+
+                    <div class="cake_picture">
+           
+                        
+                        <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/humeda.jpg" alt="Imagen de humeda">
+                    </div>
+
+                    <div class="cake_content">
+                        <h2>TORTA HÚMEDA</h2>
+                        <p>Bizcocho húmedo de cacao, relleno
+                            de fudge y chantilly, cubierto de fudge
+                            y virutas de chocolate.</p>
+                    </div>
+
+                    <div class="cake_price">
+                        <ul>
+                            <li>
+                                <span>12 porciones</span>  
+                                <span>S/ 90.00</span>    
+                            </li>
+                            <li>
+                                <span>5 porciones</span>   
+                                <span>S/ 45.00</span>    
+                            </li>
+                        </ul>
+                    </div>
+
+                </div> <!-- end cake box-->
+
+                <div class="cake_box">
+
+                    <div class="cake_picture">
+                        <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/rubia.jpg" alt="Imagen de rubia">
+                    </div>
+
+                    <div class="cake_content">
+                        <h2>TORTA RUBIA</h2>
+                        <p>Bizcocho húmedo de pecanas, relleno
+                            de manjar blanco y chantilly, cubierto
+                            de manjar y nueces picadas.</p>
+                    </div>
+
+                    <div class="cake_price">
+                        <ul>
+                            <li>
+                                <span>12 porciones</span>  
+                                <span>S/ 95.00</span>    
+                            </li>
+                            <li>
+                                <span>5 porciones</span>  
+                                <span>S/ 48.00</span>    
+                            </li>
+                        </ul>
+                    </div>
+
+                </div> <!-- end cake box-->
+
+                
+            </div><!---end cake -->
+        </div><!--end container-->
+
+
+        <div class="container" style="height: 200px;">
+            <div class="cakeReserve">
+                    <a href="#">RESERVA AQUÍ</a>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+    
+</body>
+</html>
