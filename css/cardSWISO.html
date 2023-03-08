@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+  
+    .container-sweetLove {
+        margin: 6rem 0;
+        width: min(95%, 1200px);
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+
+    @media (min-width: 767px) {
+        .container-sweetLove {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .cardSweet__title {
+        background: rgb(144 22 48);
+        background: linear-gradient(0deg, rgb(144 22 48 / 1) 0%, rgb(0 212 255 / 0) 61%);
+        position: relative;
+        animation: .3s ease-in-out box-shadow;
+        overflow: hidden;
+    }
+
+    .cardSweet__title:hover {
+        box-shadow: 1px 11px 24px -10px rgba(0, 0, 0, 0.54);
+        -webkit-box-shadow: 1px 11px 24px -10px rgba(0, 0, 0, 0.54);
+        -moz-box-shadow: 1px 11px 24px -10px rgba(0, 0, 0, 0.54);
+    }
+
+    .cardSweet__title h2 {
+        margin: 0;
+        color: #fff;
+        font-family: 'Argue-DEMO', Arial, Sans-serif;
+        font-size: 1.5rem;
+        font-weight: normal;
+        line-height: 1.2;
+        z-index: 3;
+        text-align: center;
+        position: absolute;
+        width: calc(80% - 20px);
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform .5s ease;
+    }
+
+    .cardSweet__title:hover > h2 {
+         transform: translate(-50%, -90%);
+    }
+
+    .cardSweet__title img {
+        display: block;
+        position: relative;
+        z-index: -1;
+        height: 353px;
+        width: 100%;
+        object-fit: cover;
+        transition: transform 300ms ease;
+    }
+
+    .cardSweet__title:hover  img {
+        transform: scale(1.1);
+    }
+
+    .cardSweet__content {
+        padding:10px;
+        text-align: center;
+        font-family: 'Argue-DEMO', Arial, Sans-serif;
+    }
+    .cardSweet__content span{
+        display: block;
+        padding-top: 7px;
+    }
+
+    .cardSweet__content sub{ 
+        font-size: .8rem;
+    }
+
+    .cardSweet__content span.desc{
+        font-size: .8rem;
+        font-weight: 300;  
+    }
+
+    @media(min-width:768px){
+        .cardSweet__content span.desc{
+            font-size: 1.4rem;
+        }
+    }
+
+    .cardSweet__content span.price{
+        padding-top: 10px;
+        font-size: 2rem;
+        font-weight: 600;  
+
+        background: #F0BF12;
+        background: linear-gradient(to right, #F0BF12 0%, #C99718 50%, #F0BF12 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @media(min-width:768px){
+        .cardSweet__content span.price{
+            font-size: 2.5rem;
+        }
+    }
+
+    </style>
+
+
+</head>
+<body>
+
+  <div class="container-sweetLove">
+        <div class="cardSweet">      
+            <div class="cardSweet__title">
+                <img src="https://picsum.photos/id/237/353/316" alt="Foto">
+                <h2>
+                    Macarrones
+                </h2>
+            </div>
+
+            <div class="cardSweet__content">
+                <span class="desc">(6 unidades)</span>
+                <span class="price">S/ 38.00</span>
+            </div>
+        </div><!--cardSeet-end -->
+
+        <div class="cardSweet">      
+            <div class="cardSweet__title">
+            <img src="https://picsum.photos/id/238/353/316" alt="Foto">
+                <h2>
+                    Bombones de corazón
+                </h2>
+            </div>
+
+            <div class="cardSweet__content">
+                <span class="desc">(6 unidades)</span>
+                <span class="price">S/ 35.00</span>
+            </div>
+        </div><!--cardSeet-end -->
+
+        <div class="cardSweet">      
+            <div class="cardSweet__title">
+            <img src="https://picsum.photos/id/239/353/326" alt="Foto">
+                <h2>
+                    Torta corazón
+                </h2>
+            </div>
+
+            <div class="cardSweet__content">
+                <sub>Bizcocho de limón, embebido en almíbar
+                    de Kirsch, relleno con frosting de queso
+                    crema y compota de frutos del bosque</sub>
+                <span class="desc">(8 porciones)</span>
+                <span class="price">S/ 99.00</span>
+            </div>
+        </div><!--cardSeet-end -->
+  </div>
+    
+</body>
+</html>
