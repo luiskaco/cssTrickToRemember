@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    
+</head>
+<body>
+    <style>
+        .container-slider {
+            display: grid;
+            grid-template-areas: "a"
+                                 "b"
+                                 "d"
+                                 "c"
+                                 ;
+          
+           
+        }
+
+        @media(min-width:768px){
+            .container-slider {
+                grid-template-areas: "a b "
+                                 "c d";
+             
+            }
+        }
+
+        .section-content-a {
+            grid-area: a;
+        }
+
+        .section-content-b {
+            grid-area: b;
+        }
+
+        .section-content-c {
+            grid-area: c;
+        }
+
+        .section-content-d {
+            grid-area: d;
+        }
+
+
+        /*/li*/
+
+         .container-tree-principal{
+                display: flex;
+                justify-content: center;
+                height: 70vh;
+                padding: 0 20px;
+            }
+
+            @media(min-width:768px){
+                .container-tree-principal{
+                    height: 100vh;
+                    padding: 0;
+                }
+            }
+
+            .container-tree{
+            
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap:1rem;
+            }
+
+            @media(min-width:768px){
+                .container-tree{
+                    
+                    height:100vh; 
+                    width: 500px;
+                }
+            }
+
+
+        .content-title p{
+            font-family: 'Raleway-Regular', Arial, Sans-serif ;
+            font-size: 1.4rem;
+            font-weight:bold;
+            color:#BC274A;
+            line-height:1.1;
+            margin: 0;
+        }
+
+        .gradienTitle {
+                  /* padding-top: 120px; */
+                  background: #F8C624;
+            background: linear-gradient(to right, #F8C624 0%, #C3932F 50%, #F8C624 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media(min-width:768px){
+            .content-title p{
+                font-size: 2.5rem;
+                    padding-top: unset;
+            
+            }
+        }
+
+        .container-tree ul{
+        list-style: none;
+        }
+
+        .container-tree ul li {
+            font-family: 'Raleway-Regular', Arial, Sans-serif ;
+            font-size: 1rem;
+            font-weight:300;
+            list-style: none;
+            position: relative;
+
+            padding-left:20px;
+            padding-bottom:15px;
+        }
+        
+        @media(min-width:768px){
+            .container-tree ul li {
+                font-size: 1.4rem;
+            }
+        }
+  
+        .container-tree ul li::before {
+            content: "";
+            position: absolute;
+            background-image:url(https://www.swissotellima.com.pe/wp-content/uploads/2023/02/Icono-Heart.png);
+            background-repeat: no-repeat;
+            background-size: 50%;
+            left: 0;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            /*background-color: #F8AE40;*/
+            /*border-radius: 50%;*/
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            
+            /*margin-left: 2px;*/
+            /*margin-top: 2px;*/
+            animation: flowerRotate 9s ease-in-out 0s infinite normal none;
+            display: inline-block;
+
+            }
+            
+            @media(min-width:768px){
+                .section_desc_service ul li::before {
+                        width: 10px;
+                        height: 10px;
+                }
+            }
+            
+            
+        .container-tree  li::marker {
+            color: #F1709F;
+            font-size: 1.5rem;
+        }
+
+        .text-white-color { 
+            color: #fff !important;
+        }
+
+        .text-white-bold { 
+            color: #fff !important;
+            font-weight: bold;
+        }
+
+        .text-red {
+            color: #99223C !important;
+        }
+
+        /*animation li */
+
+        @keyframes flowerRotate {
+            0%,
+            100% {
+                transform: rotate(0deg);
+                transform-origin: 50% 50%;
+            }
+
+            10% {
+                transform: rotate(8deg);
+            }
+
+            20%,
+            40%,
+            60% {
+                transform: rotate(-10deg);
+            }
+
+            30%,
+            50%,
+            70% {
+                transform: rotate(10deg);
+            }
+
+            80% {
+                transform: rotate(-8deg);
+            }
+
+            90% {
+                transform: rotate(8deg);
+            }
+        }
+        /*End LI*?
+
+        /* slider */
+        .slider {
+            max-width: 100%;
+            margin: -4px auto;
+            position: relative !important;
+      
+            }
+
+            .slide {
+                display: none;
+                width: 100%;
+            
+            }
+
+            .slide img {
+                 width: 100%;
+             
+            }
+
+            .dots {
+                position: absolute;
+                bottom: 10px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            .active, .dot:hover {
+                 background-color: #717171;
+            }
+
+            /*Slidr 2*/
+
+            .slider2 {
+            max-width: 100%;
+            /* margin: 50px auto; */
+            position: relative !important;
+            }
+
+            .slide2 {
+            display: none;
+            width: 100%;
+            }
+
+            .slide2 img {
+            width: 100%;
+            }
+
+            .dots2 {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            }
+
+            .dot2 {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            }
+
+            .active, .dot2:hover {
+            background-color: #717171;
+            }
+ </style>
+    <div class="container-slider">
+        <div class="section-content-a">
+            <div class="slider">
+                <div class="slide slideID1">
+                    <img src="https://picsum.photos/id/237/1101/1080" alt="Slide 1">
+                </div>
+                <div class="slide slideID1">
+                    <img src="https://picsum.photos/id/238/1101/1080" alt="Slide 2">
+                </div>
+                <div class="slide slideID1">
+                    <img src="https://picsum.photos/id/231/1101/1080" alt="Slide 3">
+                </div>
+            
+                <div class="dots">
+                    <span class="dot dotId1 active" onclick="currentSlide(1)"></span>
+                    <span class="dot dotId1" onclick="currentSlide(2)"></span>
+                    <span class="dot dotId1" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+        <div class="section-content-b">
+            <div class="container-tree-principal">
+                <div class="container-tree">
+                       
+                       <div class="content-principal content-title gradienTitle">
+                          <p>Cena de San Valentin:</p>
+                       </div>
+           
+                       <div class="content-principal content-list ">
+                           <ul>
+                               <li><span class="text-red">Amuse Bouche</span> Trufa de foie gras y chocolate bitter</li>
+                               <li><span class="text-red">Entrée</span> Wrapsody de corvina y salmón sobre cama de
+                                hielo, crema de ají amarillo, polvo de
+                                olivas y crocantes de camote</li>
+                               <li><span class="text-red">Sorbet</span> Calvin Klein one</li>
+                               <li><span class="text-red">Fondo</span> Costillas de cordero uruguayo glaseadas a
+                                la menta, couscous al azafrán y vegetales
+                                crocantes</li>
+                           
+            
+                           </ul>
+                       </div>
+           
+                 </div>
+           </div>
+        </div>
+        <div style="background-color:#B42344" class="section-content-c">
+            <div class="container-tree-principal">
+                <div class="container-tree">
+                       
+                       <div class="content-principal content-title ">
+                          <p class="text-white-color">Incluye:</p>
+                       </div>
+           
+                       <div class="content-principal content-list text-white-color">
+                           <ul>
+                               <li><span class="text-white-bold">Pasión: </span>esfera de maracuyá, tierra de
+                                frambuesa y salsa de moras y cassís</li>
+                                <li><span class="text-white-bold">Picardía: </span> pâte de fruit de rocoto y miel con
+                                    azúcar de especias y gel de naranja y Grand
+                                    Marnier</li>
+                                <li><span class="text-white-bold">Lujuría: </span> crema de naranjilla, merengues de
+                                    vinagre de manzana, hierbas frescas</li>
+                                <li><span class="text-white-bold">Paz: </span> Mochi relleno de helado de yuzu con
+                                    gelée de menta</li>
+                                <li><span class="text-white-bold">Intensidad:</span>  mousse de chocolate amargo</li>
+                               
+    
+                           </ul>
+                       </div>
+           
+                 </div>
+           </div>
+        </div>
+        <div class="section-content=d">
+            <div class="slider">
+                <div class="slide slideID2">
+                    <img src="https://picsum.photos/id/237/1101/1080" alt="Slide 1">
+                </div>
+                <div class="slide slideID2">
+                    <img src="https://picsum.photos/id/238/1101/1080" alt="Slide 2">
+                </div>
+                <div class="slide slideID2">
+                    <img src="https://picsum.photos/id/231/1101/1080" alt="Slide 3">
+                </div>
+            
+                <div class="dots">
+                    <span class="dot dotId2 active" onclick="currentSlide(1 , 2)"></span>
+                    <span class="dot dotId2" onclick="currentSlide(2, 2)"></span>
+                    <span class="dot dotId2" onclick="currentSlide(3, 2)"></span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+  
+    
+     
+
+    <script>
+    
+            var slideIndex = 1;
+            var slideIndex2 = 1;
+            var timer;
+
+            showSlides(slideIndex);
+            showSlides2(slideIndex2) 
+            startTimer();
+
+            function currentSlide(n , c = null) {
+
+                if(c == 2) {
+                    showSlides2(slideIndex2 = n);
+                }else {
+                    showSlides(slideIndex = n);
+                }
+               
+                clearInterval(timer);
+                startTimer();
+            }
+
+            function startTimer() {
+                timer = setInterval(function() {
+                    showSlides(slideIndex += 1);
+                    showSlides2(slideIndex2 += 1);
+                }, 5000);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("slideID1");
+                var dots = document.getElementsByClassName("dotId1");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+
+            function showSlides2(n) {
+                var i;
+                var slides = document.getElementsByClassName("slideID2");
+                var dots = document.getElementsByClassName("dotId2");
+                if (n > slides.length) {slideIndex2 = 1}
+                if (n < 1) {slideIndex2 = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex2-1].style.display = "block";
+                dots[slideIndex2-1].className += " active";
+            }
+            
+
+            
+  </script>
+</body>
+</html>

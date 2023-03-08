@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flipbook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/samples/basic/css/basic.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+    <style>
+
+    
+
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+    }
+    #flipbook {
+      width: 800px;
+      height: 600px;
+      margin: 0 auto;
+    }
+    .flipbook-page {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+
+        #flipbook img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+        }
+
+       #prev-page, #next-page {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border: 2px solid #666;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+            color: #666;
+            opacity: 0.8;
+            transition: opacity 0.2s ease-in-out;
+    }
+    #prev-page:hover, #next-page:hover {
+      opacity: 1;
+    }
+    #prev-page {
+      left: 20px;
+    }
+    #next-page {
+      right: 20px;
+    }
+    .flipbook-page.turning {
+      transform: rotateY(-180deg);
+      transition-duration: 0.8s;
+    }
+    .flipbook-page.turning.back {
+      transform: rotateY(180deg);
+      transition-duration: 0.8s;
+    }
+    </style>
+</head>
+<body>
+  
+
+
+
+      <div id="flipbook">
+        <div><img src="https://picsum.photos/id/222/200/300"></div>
+        <div><img src="https://picsum.photos/id/223/200/300"></div>
+        <div><img src="https://picsum.photos/id/210/200/300"></div>
+        <div><img src="https://picsum.photos/id/211/200/300"></div>
+        <div><img src="https://picsum.photos/id/213/200/300"></div>
+        <div><img src="https://picsum.photos/id/214/200/300"></div>
+        <div><img src="https://picsum.photos/id/215/200/300"></div>
+        <div><img src="https://picsum.photos/id/216/200/300"></div>
+        <div><img src="https://picsum.photos/id/217/200/300"></div>
+        <div><img src="https://picsum.photos/id/218/200/300"></div>
+        <div><img src="https://picsum.photos/id/219/200/300"></div>
+        <div><img src="https://picsum.photos/id/232/200/300"></div>
+      </div>
+      <div id="prev-page">1</div>
+      <div id="next-page">1</div>
+
+
+
+        <script>
+              $(function() {
+  var flipbook = $("#flipbook");
+
+  flipbook.turn({
+    width: 800,
+    height: 600,
+    autoCenter: true,
+    display: 'double'
+  });
+
+  $('#prev-page').click(function() {
+    if (flipbook.turn('page') > 1) {
+      flipbook.addClass('turning back');
+      setTimeout(function() {
+        flipbook.turn('previous');
+        flipbook.removeClass('turning back');
+      }, 800);
+    }
+  });
+
+  $('#next-page').click(function() {
+    if (flipbook.turn('page') < flipbook.turn('pages')) {
+      flipbook.addClass('turning');
+      setTimeout(function() {
+        flipbook.turn('next');
+        flipbook.removeClass('turning');
+      }, 800);
+    }
+  });
+});
+         </script>
+      <
+</body>
+</html>
