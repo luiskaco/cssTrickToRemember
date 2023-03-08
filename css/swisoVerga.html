@@ -7,11 +7,86 @@
     <title>SWISO VERGA</title>
 
     <style>
+          /*LOGO*/
+       
+          .hero--bg {
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-image:url(https://www.swissotellima.com.pe/wp-content/uploads/2023/02/Banner-480x867-Mobil-min.jpg) !important;
+        }
+
+        @media(min-width:768px){
+            .hero--bg {
+                background-size:cover;
+                background-repeat: no-repeat;
+                background-image:url(https://www.swissotellima.com.pe/wp-content/uploads/2023/02/Banner-1366x768-web-min.jpg) !important;
+            }
+        }
+
+
+        .logo{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            place-content: center; 
+            align-items: center;
+           
+            height:100vh;
+        }
+
+            @media(min-width:768px){
+                .logo{
+                    grid-template-columns: repeat(2, 1fr);
+                    width: 75%;
+                    padding-top: 2rem;
+                }
+            }
+
+        .logo__image,  .logo__image_title {
+            text-align: center;  
+        }
+
+            @media(min-width:768px){
+                .logo__image {
+                    text-align: right;  
+                    padding-right: 20px;
+                }
+            }
+
+        .logo__image img {
+            width: 60%;
+         
+        }   
+
+            @media(min-width:768px){
+                .logo__image_title {
+                    text-align: left;  
+                }
+            }
+
+        .logo__image_title img {
+            width: 90%;
+            padding-bottom: 70px;
+        }   
+
+            @media(min-width:768px){
+                .logo__image_title img {
+                    border-left: 1px solid #01713E; 
+                    padding-left: 20px;
+                    padding-bottom: unset;
+                }
+            }
+    </style>
+
+    <style>
 
         @import 'https://use.fontawesome.com/releases/v5.15.2/css/all.css';
         .container{
             width: min(95%, 1200px);/* minimo es 95 max es 120rem*/
             margin-inline: auto;  
+        }
+
+        h1, h2, h3 {
+            letter-spacing: unset !important;
         }
         
         .text-bold{
@@ -31,8 +106,7 @@
             @media(min-width:767px){
                     .lalocanda__content {
                         height: 35rem;
-                    
-                     
+                                
                     }
             }
 
@@ -41,25 +115,27 @@
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-   
+
         }
      
 
         .lalocanda__content h1 {
-            font-family: 'NewYork', Arial, Sans-serif;
-            font-size: 1.1rem ;
+            font-family: 'Fogtwono5', Arial, Sans-serif;
+            font-size: 1rem ;
             text-align: center;
+            font-weight: 400 ;
             line-height: 1.2;
             color:#1D1D1B;
-            font-weight: normal;
             margin: 0;
-          
+            text-transform: unset !important;
+
         }
 
             @media(min-width:767px){
                 .lalocanda__content h1 {
-                    font-size: 2.4rem;
+                    font-size: 2.2rem;
                     padding: 0 80px;
+                    
                 }
             }
 
@@ -95,28 +171,32 @@
 
 
         .mug__content h2{
-            font-family: 'NewYork', Arial, Sans-serif;
-            line-height: 1,2;
+            font-family: 'Fogtwono5', Arial, Sans-serif;
+            line-height: 1.2;
             font-size: 1rem;
-            font-weight: 300;
+            font-weight: bold !important;
             margin: 0;
-            margin-bottom: 1rem;
-            color:#1D1D1B;
+            margin-bottom: .7rem;
+            color:#1d1d1b;
+            text-transform: unset !important;
+            
+          
         }
 
             @media(min-width:767px){
                 .mug__content h2{ 
-                    font-size: 1.5rem;
+                    font-size: 1.6rem;
                 }
             }
 
         .mug__content p{
-            font-family: 'NewYork', Arial, Sans-serif;
+            font-family: 'Fogtwono5', Arial, Sans-serif;
             margin: 0 20px;
             line-height: 1.2;
             font-size: 1rem;
             font-weight: 300;
-            color:#1D1D1B;
+            color:#1d1d1b;
+          
         }
 
             @media(min-width:767px){
@@ -131,7 +211,7 @@
 
         .mug__content .mug__btn a {
             text-decoration: none;
-            font-family: 'NewYork', Arial, Sans-serif;
+            font-family: 'Fogtwono5', Arial, Sans-serif;
             background-color: #00723F;
             color: #fff;
             font-weight: bold;
@@ -237,7 +317,10 @@
         }
 
         .pictures__cardContent {
+            display: flex;
          
+            flex-direction: column;
+            justify-content: flex-start;
             text-align: center;
             position: absolute;
             bottom: 0;
@@ -265,18 +348,32 @@
         .pictures__cardContent h3, .pictures__cardContent p  {
              margin: 0;
              color: #fff;
-             font-family: 'NewYork', Arial, Sans-serif;
+            
+             text-transform: unset !important;
+             font-weight: normal;
+             
         }
 
         .pictures__cardContent h3 {
             font-size: 1rem;
             margin-bottom: 8px;
+            line-height:1.2;
+            font-family: 'Fogtwono5', Arial, Sans-serif;
+            font-weight: bold;
+        }
+
+        @media(min-width:768px){
+            .pictures__cardContent h3 {
+                font-size: 1rem;
+            }
         }
 
         .pictures__cardContent p {
             font-size: .9rem;
+            font-family: 'Raleway', Arial, Sans-serif;
         }
 
+        /*arrow*/
         .arrow-down {
             display: flex;
             justify-content: center;
@@ -289,12 +386,55 @@
             color: #fff;
         }
 
+
+
+
+        @media(min-width:768px){
+            .pictures__cardContent_show {
+                text-align: center;
+                position: absolute;
+                line-height: 1.2;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                opacity: 1;
+                z-index: 3;
+                font-size: 1rem;
+                color:#1d1d1b;
+                font-family: 'Fogtwono5', Arial, Sans-serif;
+                font-weight: bold;
+                /* transition: opacity 400ms ease-in-out; */
+                text-transform: unset !important;
+            }
+
+       
+            .pictures__card:hover  .pictures__cardContent_show {
+                color: #fff;  
+                opacity: 0;
+            }
+        }
+     
+   
+
     </style>
 
 </head>
 <body>
+
+<div class="hero--bg">
+    <div class="container">
+        <div class="logo">
+            <div class="logo__content logo__image">
+                <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/LaLocanda.png" alt="logo verde">
+            </div>
+            <div class="logo__content logo__image_title">
+                <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/titulo.png" alt="titulo de delica de mediterreanea">
+            </div>
+        </div>
+    </div>
+</div>
     
- <div class="locanda--bg ">
+ <div class="locanda--bg">
     <main class="container lalocanda">
        <div class="lalocanda__content" >
             <img src="https://www.swissotellima.com.pe/wp-content/uploads/2022/10/logo_laLocanda_verde.png"
@@ -344,23 +484,26 @@
 <div class="pictures--bg">
     <div class="container pictures">
          <div class="pictures__content">
+            
             <div class="pictures__card">
                 <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/Card-1-Plato.jpg" alt="plato de Atún mediterráneo " >
+                <h3 class="pictures__cardContent_show">Atún mediterráneo</h3>
                 <div class="pictures__cardContent">
                     <h3>Atún mediterráneo</h3>
-                    <p>Sellado a la plancha, servido sobre
-                        socca, con emulsión de caponata
-                        y un consomé de garbanzo
-                        aromatizado con dashi de atún.</p>
-                   
-                        <div class="arrow-down">
-                            <i class="fas fa-angle-down"></i>
-                         </div>
-                    
+                        <p>Sellado a la plancha, servido sobre
+                            socca, con emulsión de caponata
+                            y un consomé de garbanzo
+                            aromatizado con dashi de atún.</p>
+                       
+                            <div class="arrow-down">
+                                <i class="fas fa-angle-down"></i>
+                             </div>
+                       
                 </div>
             </div>
             <div class="pictures__card">
                 <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/Card-2-Plato.jpg" alt="Plato de Ensalada Griega" >
+                <h3 class="pictures__cardContent_show">Ensalada Griega</h3>
                 <div class="pictures__cardContent">
                     <h3>Ensalada Griega</h3>
                     <p>Una refrescante ensalada de aceitunas, queso fela, cebolla, pepinos y tomates cereza, aderezada con vinagreta de yogurt.</p>
@@ -373,6 +516,7 @@
             </div>
             <div class="pictures__card">
                 <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/Card-3-Plato.jpg" alt="Plato Pesca del día en condimento negro" >
+                <h3 class="pictures__cardContent_show">Pesca del día <br>en condimento negro</h3>
                 <div class="pictures__cardContent">
                     <h3>Pesca del día en condimento negro</h3>
                     <p>Condimento a base de soya, tinta de calamar, salsa worcestershire, tapioca y regaliz, servido con apapas cocotte y vegetales a la plancha.</p>
@@ -385,6 +529,7 @@
             </div>
             <div class="pictures__card">
                 <img src="https://www.swissotellima.com.pe/wp-content/uploads/2023/02/Card-4-Plato.jpg" alt="Plato de Charlotte de mango" >
+                <h3 class="pictures__cardContent_show">Charlotte de mango</h3>
                 <div class="pictures__cardContent">
                     <h3>Charlotte de mango</h3>
                     <p>Con cubitos de mango al interior, mousse y gelée de mango.</p>
