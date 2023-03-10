@@ -47,14 +47,15 @@
 <div class="container">
 
     <div class="owl-carousel owl-theme">
-        <div class="item owl-dot compartir">
-            <img src="https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/compartir.png" class="pestana compartir large" />
-        </div>
+      
         <div class="item owl-dot educa">
             <img src="https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/educa.png" class="pestana educa" /> 
         </div>
         <div class="item owl-dot creo">
             <img src="https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/creo.png" class="pestana creo" /> 
+        </div>
+        <div class="item owl-dot compartir">
+            <img src="https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/compartir.png" class="pestana compartir large" />
         </div>
         <div class="item owl-dot wemath">
             <img src="https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/wemath.png"  class="pestana wemath" />  
@@ -68,6 +69,8 @@
         <div class="item owl-dot green">
             <img src="https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/green.png"  class="pestana green" />
         </div>
+
+      
     </div>
 </div>
     
@@ -119,24 +122,31 @@
             $(function(){
  
                 //Por defaul ubicamos el 1 como primero 
-              $('.owl-carousel').trigger('to.owl.carousel', 1, true);
-
-    
+           
               $('.owl-carousel').owlCarousel({
                         center: true,
                         items:5,
-                        loop:true,
+                        loop:false,
                         margin:10,
                         dots:false,
                         autoplay:false,
-                        autoplayTimeout:2000,
+                        // autoplayTimeout:2000,
+                        startPosition: 2,
                         responsive:{
                             0:{
                                 items:3,
-                                nav:true
+                                nav:false
                             },
-                            600:{
+                            425:{
                                 items:3,
+                                nav:false
+                            },
+                            768:{
+                                items:5,
+                                nav:false
+                            },
+                            992:{
+                                items:5,
                                 nav:false
                             },
                             1000:{
@@ -150,7 +160,10 @@
 
                     // });
             });
+
         
+              
+
             const repositoryImage = {
                 'compartir' : {
                                 'short' : 'https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/compartir.png',
@@ -169,16 +182,16 @@
                                 'large' : 'https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/wemath_204X298-14-min.png',
                             },
                 'tecpro' :    {
-                    'short' : 'https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/tecpro.png',
-                    'large' : 'https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/tecpro_204X298-08-min.png',
+                                'short' : 'https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/tecpro.png',
+                                'large' : 'https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/tecpro_204X298-08-min.png',
                 },
                 'rich' :    {
-                    'short' : 'https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/rich.png',
-                    'large' : 'https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/richmond_204X298-13-min.png',
+                                'short' : 'https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/rich.png',
+                                'large' : 'https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/richmond_204X298-13-min.png',
                 },
                 'green' :    {
-                    'short' : 'https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/green.png',
-                    'large' : 'https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/green_204X298-10-min.png',
+                                'short' : 'https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/green.png',
+                                'large' : 'https://proyecto.orange-360.com/web/unMundo/wp-content/uploads/2023/01/green_204X298-10-min.png',
                 },
 
             }
@@ -189,17 +202,27 @@
 
         const defaultCompartir = document.querySelector('.compartir .large'); 
         // console.log(defaultCompartir)
-         
-
         setTimeout(()=>{
             defaultCompartir.src=repositoryImage['compartir']['large'] 
         },1000)
 
 
+        /**/
+        const dataID = [
+                {'compartir' : 'compartirId' },
+                {'educa' : 'educaId' },
+                {'creo' : 'creoId' },
+                {'wemath' : 'wemathId' },
+                {'tecpro' : 'tecproId' },
+                {'rich' : 'richId' },
+                {'green' : 'greenId' },
+            ]
+
         const dots = document.querySelectorAll('.owl-dot');
 
         dots.forEach((dot, index) => {
-      
+
+         
             dot.addEventListener("click", function(event){
                 // resetImage()
                 const index = [...dots].indexOf(this);
@@ -215,18 +238,7 @@
                 checkLarge.src=repositoryImage[checkName]['short']
                 checkLarge.classList.remove('large')
 
-                /**/
-
-                const dataID = [
-                    {'compartir' : 'compartirId' },
-                    {'educa' : 'educaId' },
-                    {'creo' : 'creoId' },
-                    {'wemath' : 'wemathId' },
-                    {'tecpro' : 'tecproId' },
-                    {'rich' : 'richId' },
-                    {'green' : 'greenId' },
-                ]
-
+    
                 //Filter dateID for name
                 const newDataID = dataID.filter(elem => {
                     return !Object.keys(elem).includes(nameSelect);
@@ -259,11 +271,16 @@
              
       
                 // Mueve el carrusel al elemento seleccionado y lo ubica en el centro
-                 $('.owl-carousel').trigger('to.owl.carousel', index, true);
+          
+
+                //  $('.owl-carousel').trigger('to.owl.carousel', index, true);
+                 $('.owl-carousel').trigger('to.owl.carousel', [index, 300, true]);
             });
 
         
         });
+
+ 
 
         function getValueByKey(data, key) {
             return data.map(({[key]: value}) => value).filter(elem => elem !== undefined);
