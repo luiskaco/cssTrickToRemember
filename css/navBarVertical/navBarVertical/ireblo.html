@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+    .social-bar {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 1000;
+    }
+
+    .social-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 50px;
+        height: 60px;
+        background-color: #6E6ED2;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 10px 0;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .item-color-01 {
+        background-color: #6E6ED2;
+    }
+
+    .item-color-02 {
+        background-color: #3FBDE8;
+    }
+
+    .social-item i {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+    .social-item img{
+        display: block;
+        margin-right: px;
+    }
+
+    .social-item:hover {
+        width: 150px;
+    }
+
+    .social-item:hover .social-item-text {
+      display: block;
+    }
+
+    .social-item:hover .tn {
+        opacity: 0;
+    }
+
+    .social-item .social-item-text {
+        display: none;
+        position: absolute;
+        /* top: 80px; */
+        left: 0;
+        width: 130px;
+        padding: 10px;
+        /* background-color: #6E6ED2; */
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 5px;
+        /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+        transition: all 0.3s ease;
+        /* bottom: -80px; */
+    }
+    </style>
+</head>
+<body>
+    <div class="social-bar">
+        <a href="#" class="social-item item-color-01">
+          <i class="fas fa-thin fa-magnifying-glass tn"></i>
+          <!-- <img src="buscar.png" alt=""> -->
+          <span class="social-item-text">Conoces los Centros<br> de Prevención</span>
+        </a>
+        <a href="#" class="social-item item-color-02">
+          <i class="fas fa-thin fa-syringe tn"></i>
+          <span class="social-item-text ">Centro de Vacunación</span>
+        </a>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,608 @@
+@import 'https://use.fontawesome.com/releases/v5.15.2/css/all.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+
+:root {
+    /** FUENTE **/
+    --fontNewyork: 'NewYork', sans-serif;
+    --fontNewyork2: 'newYork2', sans-serif;
+    --fontRaleway: 'Raleway-Regular', sans-serif;
+    --fontMonserrat: 'Montserrat', sans-serif;
+    --fontFogtwono5: 'Fogtwono5', Arial, Sans-serif ;
+    --fontWestiba: 'WestivaRegular', Arial,Sans-serif; 
+    /* Color */
+    --rosa:#F499D3;
+    --rosaLigh:#FFBEF0;
+    --blanco:#fff;
+    --negro:#969696;
+    --fuccia:#C1C0F4;
+    --morado:#C0BFF3;
+    --moradoLight:#C4C2F7;
+    --moradoFuerte:    #928AC4;
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+.container{
+    width: min(95%, 1200px);/* minimo es 95 max es 120rem*/
+    margin-inline: auto;  
+}
+
+.container_fluid {
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px; 
+    box-sizing: border-box; 
+}
+
+h1, h2, h3,h4, h5,  p {
+    letter-spacing: unset !important;
+    margin:0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    text-transform:unset;
+    line-height:1.2 !important;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.text-morado {
+    color:var(--moradoFuerte);
+    font-weight: bold;
+}
+
+.inlineBlock {
+    display: inline;
+}
+
+@media (min-width: 768px) {
+    .inlineBlock {
+        display: block;
+    }
+    
+}
+
+/*Animacionses*/
+
+
+ /*LOGO*/
+
+@media(min-width:992px){
+    .logo {
+        width: 1200px;
+     }
+}
+
+
+
+.hero--bg {
+
+    background-size: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(139, 128, 128);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-image:url(https://www.swissotellima.com.pe/wp-content/uploads/2023/03/BannerPrincipal_Pascua_480x867.jpg) ;
+}
+
+@media(min-width:768px){
+    .hero--bg {
+        background-image:url(https://www.swissotellima.com.pe/wp-content/uploads/2023/03/BannerPrincipal_Pascua_768x867.jpg) ;
+    }
+    
+}
+
+@media(min-width:992px){
+    .hero--bg {
+    
+        background-image:url(https://www.swissotellima.com.pe/wp-content/uploads/2023/03/BannerPrincipal_Pascua_1349x618.jpg) ;
+    }
+}
+
+.container_logo {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:-100px;
+    text-align: center;
+}
+
+
+@media (min-width: 768px) {
+    .container_logo {
+        align-items: center;
+        margin-top: unset;
+    }
+}
+
+@media (min-width: 992px) {
+    .container_logo {
+        align-items: end;
+      
+        margin-top: unset;
+    }
+}
+
+.container_logo div {
+   text-align: center;
+
+}
+
+.container_logo img {
+    width: 50%;
+}
+
+@media (min-width: 768px) {
+    .container_logo img {
+        width: 70%;
+    }
+}
+
+.container_logo h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: bold;
+    color: var(--rosa);
+    font-family: var(--fontNewyork2);
+}
+
+@media screen and (min-width: 768px) {
+    .container_logo h2 {
+        font-size: 7rem;
+    }
+}
+
+
+.logo_content_intern {
+    background-color: var(--fuccia);
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 1rem;
+}
+
+@media (min-width: 768px) {
+    .logo_content_intern {
+        width: 300px;
+        padding: 15px 1rem;
+
+    }
+}
+
+.logo_content_intern h3{
+    text-align: center;
+    color:#fff;
+    font-family: var(--fontFogtwono5);
+    font-size: .9rem;
+}
+
+@media (min-width: 768px) {
+    .logo_content_intern h3{
+        font-size: 1.2rem;
+    }
+}
+
+
+/** Seccion principal **/
+
+.title--bg {
+    background-color: var(--moradoLight);
+    background-image: url(https://www.swissotellima.com.pe/wp-content/uploads/2023/03/Background_Pacuas_Lila.jpg);
+    background-position: center;
+    background-clip: no-repeat;
+    position: relative;
+}
+
+.container_pascua {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title--bg::after {
+    content: "";
+    display: block;
+    width:150px; /* adjust size as needed */
+    height: 150px; /* adjust size as needed */
+    background-image: url(https://www.swissotellima.com.pe/wp-content/uploads/2023/03/Huevo-1.png);
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 80%;
+    transform: translate(0, -50%);
+  }
+
+  @media (min-width: 768px) {
+        .title--bg::after {
+            width:280px; /* adjust size as needed */
+            height: 280px; /* adjust size as needed */
+            top: 50%;
+        }
+  }
+
+  .title--bg::before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-image: url(https://www.swissotellima.com.pe/wp-content/uploads/2023/03/Huevo-2.png);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+
+  @media (min-width: 768px) {
+    .title--bg::before {
+        top: 50%;
+        width: 280px;
+        height: 280px;
+      
+      }
+  }
+
+
+
+
+/* .container_pascua .nav_button a{
+    background-color: #9a9a9a;
+    font-family: var(--fontFogtwono5);
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: background-color .3s ease-out ;
+}
+
+    @media (min-width: 768px) {
+        .container_pascua .nav_button a{
+            font-size: 1.5rem;
+        }
+    }
+
+.container_pascua .nav_button a:hover{
+    background-color: #6c6c6c;
+} */
+
+.pascua_content {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.pascua_content h1 {
+    color: var(--blanco);
+    font-family: var(--fontNewyork);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+    @media (min-width: 768px) {
+        .pascua_content h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+.pascua_content p{
+    margin-top:1rem;
+    color: var(--negro);
+    font-family: var(--fontRaleway);
+    font-size: 1rem;
+}
+
+    @media (min-width: 768px) {
+        .pascua_content p{
+            font-size: 2rem;
+        }
+    }
+
+
+/** end seccion principal **/
+
+/*** PAKAGE ***/
+
+
+.package {
+    padding: 8rem 0;
+}
+
+@media (min-width: 768px) {
+    .package {
+        padding: 8rem 0;
+    }
+}
+
+
+.container_principal_package {
+    display: flex ;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+    .container_principal_package {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+.container_principal_package img {
+    width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.cambiar1 {
+    order:2
+}
+
+.cambiar2{
+    order:1
+}
+
+@media (min-width: 768px) {
+    .cambiar1 {
+        order:1
+    }
+
+    .cambiar2{
+        order:2
+    }
+}
+
+
+
+
+.elementContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+    padding: 3rem 1rem;
+}
+
+@media(min-width:768px){
+    .elementContent {
+        padding: 3rem 4rem;
+        width: 700px;
+        align-items: start;
+        gap: 2rem;
+    }
+}
+
+@media(min-width:768px){ 
+    .elementContent {
+        padding: 3rem 4rem;
+        width: 700px;
+        align-items: start;
+        gap: 2rem;
+    }
+}
+
+.elementContent h2 {
+   position: relative;
+   font-family: var(--fontNewyork);
+   font-size: 1.8rem;
+   font-weight: 500;
+   color: var(--moradoFuerte);
+}
+
+@media(min-width:768px){
+    .elementContent h2 {
+        font-size: 2.5rem;
+   
+     }
+}
+
+
+.elementContent h2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color:  var(--moradoFuerte);
+    transform-origin: bottom left;
+    transform: scaleX(1);
+    transition: transform 0.3s ease-out;
+  }
+
+  
+  @media (min-width: 768px) {
+    .elementContent h2::before {
+         transform: scaleX(0);
+       
+      }
+  }
+  /* .elementContent :hover::before {
+    transform: scaleX(1);
+  } */
+
+  .container_principal_package:hover h2::before {
+    transform: scaleX(1);
+  }
+
+
+ .elementContent p {
+    font-family: var(--fontRaleway);
+    line-height: 1.2;
+    font-size: 1.2rem;
+ 
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    .elementContent p {
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+}
+
+ .elementContent a {
+    font-family: var(--fontRaleway);
+    font-weight: bold;
+    background-color:var(--rosaLigh);
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    transition: background-color .3s ease-in-out;
+}
+
+.elementContent a:hover{
+    background-color: var(--rosa);
+}
+
+
+@media (max-width: 425px) {
+
+    .elemento1 , .elemento4, .elemento5{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+ .elemento3 {
+    order: 2;
+  }
+  
+  .elemento4 {
+    order: 1;
+  }
+
+@media (min-width: 768px) {
+    .elemento1 {
+       
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+      
+      .elemento2 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+      
+      .elemento3 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        order: 1;
+      }
+      
+      .elemento4 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        order: 2;
+      }
+      
+      .elemento5 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+      }
+      
+      .elemento6 {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+      }
+}
+
+.elemento6 {
+    margin-bottom: 4rem;
+}
+
+
+
+/*** END PACKAGE ***/
+/*terminos*/
+
+.termino--bg{
+    background-color: var(--rosaLigh);
+}
+
+.terminos {
+    height: calc(100vh - 20rem);
+    display: grid;
+    place-content: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+@media(min-width:768px){
+    .terminos {
+        height: 300px;  
+    }
+}
+.terminos h2 {
+  
+    font-family: var(--fontRaleway);
+    font-size: 1rem;
+    color: var(--moradoFuerte);
+}
+
+@media (min-width: 768px) {
+    .terminos h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+
+.terminos a {
+    margin: 0 auto;
+    display: block;
+
+    font-family: var(--fontRaleway);
+    font-weight: bold;
+    background-color: var(--morado);
+    text-decoration: none;
+    font-size: .9rem;
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    transition: background-color .3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .terminos a {
+        font-size: 1.5rem;
+        width: 500px;
+    }
+}
+
+.terminos a:hover{
+    background-color: var(--rosa);
+}
+
+
