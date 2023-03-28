@@ -1,0 +1,50 @@
+<style>
+
+    .contenedor {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index:200;
+    }
+
+.circulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid white;
+  background-color: #6E6ED2;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.circulo:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.circulo a {
+  text-decoration: none;
+  color: inherit;
+  font-size: .8rem;
+  line-height: 1.1;
+}
+</style>
+
+
+<div class="contenedor">
+<div class="circulo">
+  <a href="#vacuna_publica">Centros de vacunación</a>
+</div>
+
+<div class="circulo">
+  <a href="#centros">Centros de Detección</a>
+</div>
+</div>
