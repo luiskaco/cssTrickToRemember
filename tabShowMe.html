@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+     <link rel="stylesheet" href="/tabShowMe.css">
+ 
+<body>
+    
+   <div class="container">
+
+        <div class="tab">
+                <div>
+                     <a href="#" class="tablinks " onclick="openTab(event, 'tab1')">Desmotivación</a>
+                </div>
+                <div>
+                      <a href="#" class="tablinks" onclick="openTab(event, 'tab2')">perdida de cabello</a>
+                </div>
+                <div>
+                      <a href="#" class="tablinks" onclick="openTab(event, 'tab3')">No bajar de peso</a>
+                </div>
+                <div>
+                    <a href="#" class="tablinks" onclick="openTab(event, 'tab3')">Estreñimiento</a>
+              </div>
+        </div>
+       
+
+
+      
+                <div id="tab0" class="tabcontent" style="display: none;">
+                    <div class="tab_imagen">
+                        <div>
+                            <a href="#" onclick="openTab(event, 'tab1')">
+                                <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Desmotivacion-1-1.png" alt="imagen de DESMOTIVACIón ">
+                            </a>
+                            
+                        </div>
+                        <div>
+                            <a href="#" onclick="openTab(event, 'tab2')">
+                                <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Perdidadecabello-2-1.png" alt="imagen de perdida de
+                                cabello ">
+                            </a>
+                           
+                        </div>
+                        <div>
+                            <a href="" onclick="openTab(event, 'tab3')">
+                                <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/nobajardepeso-3-1.png" alt="imagen de No bajar
+                                de peso ">
+                            </a>
+                      
+                        </div>
+                        <div>
+                            <a href="" onclick="openTab(event, 'tab4')">
+                                <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/estrenimiento-4-1.png" alt="imagen de estreñimiento ">
+                            </a> 
+
+                        </div>
+                    </div>
+                </div>
+           
+                <div id="tab1" class="tabcontent" style="display: block;">
+
+                    <div class="card_sintomas">
+                        
+                        <div class="sintomas_image"> 
+                            <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Desmotivacion-1-1-1.png" alt="imagen de DESMOTIVACIón">
+                        </div>
+
+                        <div class="sintomas_content">
+
+                            <div class="sintomas_burble">
+                                <div class="burble_content">
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Box-1-1.png" alt="">
+                                    <p>No quiero trabajar, ni juerguear y menos hacer el delicioso. Si te sientes igual, puede que tu Tiroides esté malita.</p>
+                                </div>
+                                <div class="burble_resume">
+                                    <H2>Des<br>motiva<br>ción</H2>
+                                    <p>Jany Ganas</p>
+                                </div>
+                              
+                            </div>
+
+                            <div class="sintomas_resume">
+                                <p>Muchos de los síntomas del hipotiroidismo pueden ser confundidos con otras condiciones.
+                                    Menos energía, fatiga, dificultad para despertarse por la mañana, necesidad de dormir más y tendencia a quedarse dormido durante el día son algunas de los más frecuentes.
+                                    
+                                    Fuente: American Thyroid Association. Hypothyroidism a booklet fot patients and their families.
+                                    https://www.thyroid.org/wp-content/uploads/patient/brochures/Hypothyroidism_web_booklet.pdf?=pdf=Hypothyroidism%20Booklet
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                <div id="tab2" class="tabcontent">
+                    <h3>Pestaña 2</h3>
+                    <p>Contenido de la pestaña 2.</p>
+                </div>
+                
+                <div id="tab3" class="tabcontent">
+                    <h3>Pestaña 3</h3>
+                    <p>Contenido de la pestaña 3.</p>
+                </div>
+
+                <div id="tab4" class="tabcontent">
+                    <h3>Pestaña 4</h3>
+                    <p>Contenido de la pestaña 4.</p>
+                </div>
+    
+        
+
+   </div>
+
+
+   <script>
+        const openTab = (evt, tabName) => {
+            evt.preventDefault();
+            
+            let i, tabcontent, tablinks;
+            
+            tabcontent = document.getElementsByClassName("tabcontent");
+            
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            
+            tablinks = document.getElementsByClassName("tablinks");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        window.onload = () => {
+            document.getElementById("tab0").style.display = "block";
+        }
+    </script>
+
+    
+</body>
+</html>
