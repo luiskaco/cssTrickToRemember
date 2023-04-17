@@ -20,23 +20,36 @@
     }
 
     .social-item {
+        cursor: pointer;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 120px;
-        height: 100px;
+        height: 70px;
         background-color: #6E6ED2;
         color: #fff;
-        font-size: 14px;
+    
         font-weight: bold;
         text-align: center;
         text-decoration: none;
-        border-radius: 5px;
+        border-radius: 15px 0 0 15px;
         margin: 10px 0;
         position: relative;
         overflow: hidden;
         transition: all 0.3s ease;
+    }
+
+    @media(min-width:768px){
+        .social-item {
+            width: 120px;
+            height: 100px;
+        }
+    }
+
+    .social-item:hover {
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     }
 
     .item-color-01 {
@@ -53,17 +66,6 @@
         margin-right: px;
     }
 
-    /* .social-item:hover {
-        width: 150px;
-    } */
-
-    /* .social-item:hover .social-item-text {
-      display: block;
-    } */
-
-    /* .social-item:hover .tn {
-        opacity: 0;
-    } */
 
     .social-item .social-item-text {
         text-decoration: none;
@@ -74,10 +76,10 @@
         padding: 0 10px;
         /* background-color: #6E6ED2; */
         color: #fff;
-        font-size: .8rem;
+        font-size: .6rem;
         font-weight: bold;
         text-align: center;
-        border-radius: 5px;
+        
         /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
         transition: all 0.3s ease;
         /* bottom: -80px; */
@@ -85,14 +87,25 @@
 
     .social-item .social-item-text i {
         margin: 0;
-        font-size: 24px;
+        display: none;
+        font-size: 1rem;
        
     }
 
+    @media(min-width:768px){
+        .social-item .social-item-text i {
+            display: block;
+        }
+    }
+
     .social-item:after {
-        content: "2";
+        content: "";
+       
         color:red;
+        /* background-color: red; */
         font-size: 30px;
+        width: 30px;
+        height: 30px;
         position: absolute;
 
         top: 50%;
@@ -103,20 +116,25 @@
 </head>
 <body>
     <div class="social-bar">
-        <div class="social-item item-color-01">
-            <div class="social-item-text">
-                <i class="fas fa-thin fa-magnifying-glass "></i>
-                <!-- <img src="buscar.png" alt=""> -->
-                <span >Centros<br> de Prevención <br>a nivel nacional</span>
-           </div>
-        </div>
-        <div class="social-item item-color-02">
-            <div class="social-item-text">
-                <i class="fas fa-thin fa-syringe "></i>
-                <span >Centro de Vacunación <br>a nivel nacional</span>
-           </div>
-        </div>
-      
+        <a href="#centros">
+            <div class="social-item item-color-01">
+                <div class="social-item-text">
+                    <i class="fas fa-thin fa-magnifying-glass "></i>
+                    <!-- <img src="buscar.png" alt=""> -->
+                    <span >Centros<br> de Prevención <br>a nivel nacional</span>
+               </div>
+            </div>
+        </a>
+
+        <a href="#vacuna_publica">
+     
+            <div class="social-item item-color-02">
+                <div class="social-item-text">
+                    <i class="fas fa-thin fa-syringe "></i>
+                    <span >Centro de Vacunación <br>a nivel nacional</span>
+            </div>
+            </div>
+        </a>
        
     </div>
     
