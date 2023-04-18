@@ -3,6 +3,7 @@
     margin-inline: auto;  
 }
 
+/*UTILIDADES*/
 .db{
     display: inline;
 }
@@ -12,6 +13,40 @@
        display: block;
     }
 }
+
+.bgMorado {
+    background-color: #967AAB;
+}
+
+.bgAmarillo {
+    background-color: #EEC65C;
+}
+
+.bgAzul {
+    background-color: #92C2E7;  
+}
+
+.bgRosa {
+    background-color: #EDB4DD;  
+}
+
+.text-morado {
+    color: #522582 !important;
+}
+
+.text-amarillo {
+    color: #F6CA0C !important;
+}
+
+.text-rosa {
+    color: #EC3C96 !important;
+}
+
+.text-bold{
+    text-font:bold;
+}
+
+/*END UTILIDADES*/
     
 .tabForm {
     display: flex;
@@ -49,9 +84,9 @@
         transition: .3s ease-in-out background-color;
     }
 
-    .tab div:hover{
+    /* .tab div:hover{
         background-color: #643fba;
-    }
+    } */
 
 .tablinks {
     flex-grow: 1;   
@@ -64,31 +99,73 @@
 }
 
 .tablinks.active {
-    border-bottom: 2px solid blue; 
+    border-bottom: 2px solid #F6CA0C; 
 }
 
 /* Tab Content */
+   
+
+       @media(max-width:425px){
+            .tabContentMenu {
+                display: block !important;
+            }
+       }
+
     .tabcontent {
         /* display: none; */
-        padding: 50px 10px;    
+        padding: 20px 10px;    
     }
 
-    .tabcontent .tab_imagen {
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       text-align: center;
-       
+    @media(min-width:768px){
+        .tabcontent {
+            padding: 50px 10px; 
+        }
     }
+
+        .tabcontent .tab_imagen {
+            display: flex;
+            flex-direction: column;
+           
+        
+        }
 
         @media(min-width:768px){
             .tabcontent .tab_imagen {
+                justify-content: space-evenly;
                 flex-direction: row;
             }
        
         }
 
+    .tabcontent .tab_imagen div {
+        flex:1 0 50%;
+        text-align: center;
+    }
+
+    .tabcontent .tab_imagen div h2{
+        display: none;
+        text-align: center;
+        text-decoration: none;
+        font-family: "Merck", Sans-serif;
+        font-size:.5rem;
+    }
+
+    @media(max-width:425px){
+        .tabcontent .tab_imagen div img {
+            width: 75%;
+        }
+
+        
+        .tabcontent .tab_imagen div h2{ 
+            display: block;
+        }
+    }
+    
+  
+
 /* Tab Content END  */
+
+
 
 
 .card_sintomas {
@@ -99,7 +176,6 @@
         "div1"
         "div2" ; */
 }
-
 
     @media(min-width:768px){
         .card_sintomas {
@@ -155,7 +231,7 @@
 .sintomas_content {
     grid-area: div2;
 
-    background-color: #967AAB;
+    /* background-color: #967AAB; */
     border-radius: 30px;
 
     position: relative;
@@ -217,12 +293,13 @@
 
     @media(min-width:768px){
         .sintomas_burble .burble_content p {
-            color: #000 !important;
+            color: #522582 !important;
             position: absolute;
-            top: 40%;
-            left: 55%;
+            font-size: .7rem;
+            top: 50%;
+            left: 54%;
             transform: translate(-50%, -50%);
-            width: 300px;
+            width: 250px;
         }
     }
 
@@ -231,21 +308,35 @@
 }
 
 .sintomas_burble .burble_resume h2{
+   margin-top: 1.2rem;
     color: #F6CA0C;
     font-family: "Merck", Sans-serif;
-    font-size:2.5rem;
+    font-size:1.5rem;
     font-weight: 400;
-    text-align:right;
+    text-align: right;
     margin-bottom: 0;
 }
+
+    @media(min-width:768px){
+        .sintomas_burble .burble_resume h2{
+               margin-top: unset;
+            font-size:2.2rem;
+        }
+    }
 
 .sintomas_burble  .burble_resume p{
     color: #E1A5C9;
     font-family: "Verdana", Sans-serif;
     text-align:right;
     margin: 0;
+    font-size: 1.2rem;
 }
 
+@media(min-width:768px){
+    .sintomas_burble  .burble_resume p{
+        font-size: 1.5rem;
+    }
+}
 
 .sintomas_resume {
     margin-top: 30px;
@@ -256,23 +347,22 @@
     font-family: "Verdana", Sans-serif;
     font-size: .8rem;
     font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
 }
 
     @media(min-width:768px){
         .sintomas_resume p {
-            padding-left: 100px;
-            font-size: 1rem;
+            padding-left: 80px;
+            font-size: .9rem;
+            text-align: unset;
         }
     }
 
     @media(min-width:992px){
         .sintomas_resume p {
-            padding-left: 150px;
-            font-size: 1rem;
+            padding-left: 110px;
+            font-size: .9rem;
+            text-align: unset;
         }
-    
-
-    
-
-/* card movil*/
-
+    }

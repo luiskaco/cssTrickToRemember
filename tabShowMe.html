@@ -12,61 +12,62 @@
     
    <div class="container">
 
-        <div class="tab">
-                <div>
-                     <a href="#" class="tablinks " onclick="openTab(event, 'tab1')">Desmotivación</a>
+           <div class="tab">
+                    <div>
+                        <a href="#" class="tablinks " onclick="openTab(event, 'tab1')">Desmotivación</a>
+                    </div>
+                    <div>
+                        <a href="#" class="tablinks" onclick="openTab(event, 'tab2')">Perdida de cabello</a>
+                    </div>
+                    <div>
+                        <a href="#" class="tablinks" onclick="openTab(event, 'tab3')">No bajar de peso</a>
+                    </div>
+                    <div>
+                        <a href="#" class="tablinks" onclick="openTab(event, 'tab4')">Estreñimiento</a>
                 </div>
-                <div>
-                      <a href="#" class="tablinks" onclick="openTab(event, 'tab2')">perdida de cabello</a>
-                </div>
-                <div>
-                      <a href="#" class="tablinks" onclick="openTab(event, 'tab3')">No bajar de peso</a>
-                </div>
-                <div>
-                    <a href="#" class="tablinks" onclick="openTab(event, 'tab3')">Estreñimiento</a>
-              </div>
-        </div>
+            </div>
     
-
-            <div id="tab0" class="tabcontent" style="display: none;">
+            
+            <div id="tab0" class="tabcontent tabContentMenu" >
                     <div class="tab_imagen">
-                        <div>
-                            <a href="#" onclick="openTab(event, 'tab1')">
+                        <a href="#" onclick="openTab(event, 'tab1')">
+                            <div>
                                 <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Desmotivacion-1-1.png" alt="imagen de DESMOTIVACIón ">
-                            </a>
-                            
-                        </div>
-                        <div>
-                            <a href="#" onclick="openTab(event, 'tab2')">
+                                <h2>Desmotivación</h2>
+                            </div>
+                        </a>
+                        <a href="#" onclick="openTab(event, 'tab2')">
+                            <div>
                                 <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Perdidadecabello-2-1.png" alt="imagen de perdida de
                                 cabello ">
-                            </a>
-                           
-                        </div>
-                        <div>
-                            <a href="" onclick="openTab(event, 'tab3')">
+                                <h2>Perdida de cabello</h2>
+                            </div>
+                        </a>
+                        <a href="" onclick="openTab(event, 'tab3')">
+                            <div>
                                 <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/nobajardepeso-3-1.png" alt="imagen de No bajar
-                                de peso ">
-                            </a>
-                      
-                        </div>
-                        <div>
-                            <a href="" onclick="openTab(event, 'tab4')">
+                                    de peso ">
+                                    <h2>No bajar de peso</h2>
+                            </div>
+                        </a>
+                        <a href="" onclick="openTab(event, 'tab4')">
+                            <div>
                                 <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/estrenimiento-4-1.png" alt="imagen de estreñimiento ">
-                            </a> 
-
-                        </div>
+                                <h2>Estreñimiento</h2>
+                            </div>
+                        </a> 
                     </div>
                 </div>
-           
-                <div id="tab1" class="tabcontent" style="display: block;">
+                
+                <!-- despresion -->
+                <div id="tab1" class="tabcontent" style="display: none;">
 
                     <div class="card_sintomas">
                         <div class="sintomas_image "> 
                              <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Desmotivacion-1-1-1.png" alt="imagen de DESMOTIVACIón">
                         </div>
 
-                        <div class="sintomas_content">
+                        <div class="sintomas_content bgMorado">
                             <div class="sintomas_burble">
                                 
                                 <div class="burble_content">
@@ -75,8 +76,8 @@
                                     <p>No quiero trabajar, ni juerguear y menos hacer el delicioso. Si te sientes igual, puede que tu Tiroides esté malita.</p>
                                 </div>
                                 <div class="burble_resume">
-                                    <H2>Des<span class="db"></span>motiva<span class="db"></span>ción</H2>
-                                    <p>Jany Ganas</p>
+                                    <H2 class="text-amarillo">Des<span class="db"></span>motiva<span class="db"></span>ción</H2>
+                                    <p class="text-morado">Jany Ganas</p>
                                 </div>
                             </div>
 
@@ -89,30 +90,119 @@
                                 </p>
                             </div>
                         </div>
-     
-
-
-
-
-
-                 </div>
+                    </div> <!-- end card -->
 
                 </div>
+                 <!-- despresion -->
                 
-                <div id="tab2" class="tabcontent">
-                    <h3>Pestaña 2</h3>
-                    <p>Contenido de la pestaña 2.</p>
-                </div>
-                
-                <div id="tab3" class="tabcontent">
-                    <h3>Pestaña 3</h3>
-                    <p>Contenido de la pestaña 3.</p>
-                </div>
+                 <!-- perdida de peso -->
+                <div id="tab2" class="tabcontent" style="display: none;">
+                    <div class="card_sintomas">
+                        <div class="sintomas_image "> 
+                             <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Desmotivacion-1-1-2.png" alt="imagen de DESMOTIVACIón">
+                        </div>
 
-                <div id="tab4" class="tabcontent">
-                    <h3>Pestaña 4</h3>
-                    <p>Contenido de la pestaña 4.</p>
+                        <div class="sintomas_content bgAmarillo">
+                            <div class="sintomas_burble">
+                                
+                                <div class="burble_content">
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Desmotivacion-1-1-2.png" class="imgLogo" alt="imagen de PERDIDA DE
+                                    CABELLO">
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Box-1-1-1.png" alt="">
+                                    <p><span class="text-bold">“¡Estoy harta de dejar mis cabellos en la almohada, </span> en la ducha y en mi cepillo de pelo! A eso súmale la piel reseca y las uñas quebradizas. Identificada? podría ser otro síntoma, hermana”</p>
+                                </div>
+                                <div class="burble_resume">
+                                    <H2 class="text-morado ">PERDIDA<span class="db"></span> DE
+                                        CABELLO</H2>
+                                    <p class="text-rosa">Yani Cabello</p>
+                                </div>
+                            </div>
+
+                            <div class="sintomas_resume ">
+                                <p>Más del 70% de las personas con hipotiroidismo manifiesta piel seca, el 41% experimenta pérdida de cabello.
+                                    Fuente: kostoglou-Athanassiou, Ntalles K.
+                                    Hypothyroidism - new aspects of an old disease.
+                                    Hippokratia.2014;14(2)
+                                </p>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
                 </div>
+                <!-- perdida de peso -->
+                
+                <!-- No bajar de peso -->
+                <div id="tab3" class="tabcontent" style="display: none;">
+                      <div class="card_sintomas">
+                        <div class="sintomas_image "> 
+                             <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Desmotivacion-1-1-1-1.png" alt="imagen de DESMOTIVACIón">
+                        </div>
+
+                        <div class="sintomas_content bgAzul">
+                            <div class="sintomas_burble">
+                                
+                                <div class="burble_content">
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Desmotivacion-1-1-1-1.png" class="imgLogo" alt="imagen de NO BAJAR
+                                    DE PESO">
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Box-1-1-1-1.png" alt="">
+                                    <p>“Llevo una constante rutina de dietas y ejercicios, pero a pesar de tanto esfuerzo, <span class="text-bold">no logro perder peso.</span> Si pasas por lo mismo, te comprendo amiga, es probable que sea otro síntoma”</p>
+                                </div>
+                                <div class="burble_resume">
+                                    <H2 class="text-rosa">NO BAJAR<span class="db"></span>
+                                        DE PESO</H2>
+                                    <p class="text-morado">Lucha Barriga</p>
+                                </div>
+                            </div>
+
+                            <div class="sintomas_resume ">
+                                <p>Un mito común es pensar que la tiroides es culpable de la Obesidad. Sin embargo, la verdad es que el hipotiroidismo puede hacer que uno aumente entre 1 o 2 kilo de peso, pero no será el culpable de un sobrepeso.
+                               </p>
+                               <p>
+                                    Fuente: American Thyroid Association.
+                                    La tiroides y el Peso.
+                                    https://www.thyroid.org/wp-content/uploads/patients/brochures/espanol/tiroides_peso.pdf
+                                </p>
+                              
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+
+                </div>
+                <!-- No bajar de peso -->
+                
+                <!-- Estreñimiento -->
+                <div id="tab4" class="tabcontent" style="display: none;">
+                      <div class="card_sintomas">
+                        <div class="sintomas_image "> 
+                             <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Desmotivacion-1-1-2-1.png" alt="imagen de DESMOTIVACIón">
+                        </div>
+
+                        <div class="sintomas_content bgRosa">
+                            <div class="sintomas_burble">
+                                
+                                <div class="burble_content">
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Desmotivacion-1-1-2-1.png" class="imgLogo" alt="imagen de DESMOTIVACIón">
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Box-1-1-2.png" alt="">
+                                    <p>“Si sientes que constantemente <span class="text-bold">te cuesta desfogarte</span> y solo andas entre pitahayas, pasas, guindones entre otro frutos secos para ayudarte.              Te cuento que también es otro síntoma”</p>
+                                </div>
+                                <div class="burble_resume">
+                                    <H2 class="text-morado">Estreñi<span class="db"></span>
+                                        miento</H2>
+                                    <p class="text-rosa">Andy Puja</p>
+                                </div>
+                            </div>
+
+                            <div class="sintomas_resume ">
+                                <p>Los síntomas de los problemas de la tiroides muchas veces confundidos con otras condiciones. El estreñimiento es uno de los síntomas frecuentemente presente.
+                                </p>
+                                <p>Fuente: Canaris GJ, Manowitz NR, Mayor G, Ridgway EC. The Colorado Thyroid Disease Prevalence Study. Arch Intern Med. 2000;160(4):526-534. doi:10.1001/archinte.160.4.526
+                                </p>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+                    
+                </div>
+                <!-- Estreñimiento -->
     
         
 
@@ -149,3 +239,4 @@
     
 </body>
 </html>
+                
