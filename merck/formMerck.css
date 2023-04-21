@@ -1,0 +1,329 @@
+.container{
+    width: min(95%, 1200px);/* minimo es 95 max es 120rem*/
+    margin-inline: auto;  
+}
+
+.dbH{
+    display: none !important;
+}
+
+.container_widzard {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+
+@media (min-width: 992px) {
+    .container_widzard {
+        width: 50%;
+    }
+}
+
+.widzar_head {
+    border-radius: 20px;
+    background-color: #EC3C96;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+   
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.20);
+}
+
+.widzar_head h2 {
+    margin: 0;  
+    color: #fff; 
+    font-family: "Merck", Sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+    @media(min-width:768px){
+        .widzar_head h2 {
+            font-size: 2rem;
+        }
+    }
+
+.widzar_head p {
+    font-family: "Verdana", Sans-serif;
+    font-weight: 400;
+    font-size: .9rem;
+    color:#F6CA0C;
+    text-transform: uppercase;
+}
+
+    @media(min-width:768px){
+        .widzar_head p { 
+            font-size: 1rem;
+        }
+    }
+
+
+
+.widzar_question {
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.20);
+   
+}
+
+    @media(min-width:768px) {
+        .widzar_question {
+            flex-direction: row;
+        }
+    }
+
+
+
+.gender-image img { 
+   
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    flex:1 0 50%;
+}
+
+    @media (min-width: 768px) {
+        .gender-image img { 
+            height: 220px;
+            border-radius: 20px  0  0 20px;
+        }
+    }
+
+.gender-body {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+    @media (min-width: 768px) {
+        .gender-body {
+            height: unset;
+            flex:1 0 50%;
+        }
+    }
+
+.question_title {
+    width: 200px;
+}
+
+.question_title h2{
+    font-family: "Verdana", Sans-serif;
+    font-weight: 400;
+    font-size: .8rem;
+    text-align: center;
+    color: #EC3C96;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.gender-selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+/* input radio */
+
+input[type="radio"] {
+     display: none;
+}
+
+.gender-selector  label {
+    display: inline-block;
+   
+    padding: 10px;
+    margin: 15px;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #EC3C96;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 2px solid #EC3C96;
+    cursor: pointer;
+    font-family: "Verdana", Sans-serif;
+
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #EC3C96;
+    color:#fff;
+}
+
+
+
+.circle-selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-selector label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin: 5px;
+
+    font-weight: bold;
+    font-family: "Verdana", Sans-serif;
+   
+    line-height: 1.5;
+    font-size: .9rem;
+    font-weight: bold;
+    text-align: center;
+    color: #EC3C96;
+    background-color: transparent;
+    border: 2px solid #EC3C96;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+ }
+
+ .gender-selector  label:hover, 
+ .circle-selector label:hover {
+    background-color: #EC3C96;
+    color: white;
+}
+
+/*iput*/
+
+  input[type="number"] {
+    border: 2px solid #EC3C96;
+    border-radius: 20px;
+    font-family: "Verdana", Sans-serif;
+    font-size: .9rem;
+    padding: 10px;
+    font-size: 20px;
+    color: #EC3C96;
+    outline: none;
+    width: 150px; 
+    margin: 0 auto; 
+    text-align: center;
+   
+  }
+  ::placeholder {
+    text-align: center;
+    color: #EC3C96; 
+  }
+
+  .widzar_footer {
+    height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .widzar_footer .botón {
+    background-color: #EC3C96;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "Verdana", Sans-serif;
+
+    transition: ease-in-out .3s background-color;
+  }
+
+  .widzar_footer .botón:hover {
+    background-color: #f359a9;
+  }
+  
+  .widzar_footer 
+    .botón::after {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url(http://localhost/nuncaParesDeAprender/wordpress/wp6merk/wp-content/uploads/2023/04/Group-10-1.png);
+        background-size: cover;
+        margin-left: 10px;
+    }
+
+
+    /*  Resultado  */
+
+    .container-result {
+        display: flex;
+        width: 100%;
+        margin-inline: auto;
+        text-align: left;
+        flex-direction: column;
+    }
+
+
+
+    @media (min-width: 768px) {
+        .container-result {
+            flex-direction: row;
+            width: 50%;
+           
+        }
+    }
+
+    .result-img img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .result-img {
+        flex: 1;
+        
+    }
+
+    .result-content {
+        flex:1;
+        padding: 20px;
+    }
+
+    .result-content p {
+        font-family: "Verdana", Sans-serif;
+        font-weight: 400;
+        color: #503291;
+        font-size: .9rem;
+    }
+
+    .result-content h2 {
+        font-family: "Merck", Sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        margin: 0;
+        color:#EC3C96;
+        margin-bottom: 2rem;
+    }

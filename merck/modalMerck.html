@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        /* Estilo del modal */
+            .modal {
+                display: none; 
+                position: fixed; 
+                z-index: 1; 
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto; 
+                background-color: rgba(0,0,0,0.7); 
+            }
+
+            /* Estilo del contenido del modal */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 15% auto; 
+                padding: 20px;
+                border: 1px solid #888;
+                width: 70%;  
+                border-radius: 25px;
+            
+            }
+
+            @media (min-width: 768px) {
+                .modal-content {
+                    width: 40%; 
+                }
+
+            }
+
+            .modal-body {
+                text-align: center;
+            }
+
+            @media (min-width: 768px) {
+                .modal-body {
+                    margin: 0 auto;
+                    width: 400px;
+                }
+            }
+
+            .modal-body p {
+                font-family: "Verdana", Sans-serif;
+                font-size: .8rem;
+                font-weight: 400;
+                color:#522582;
+             
+            }
+
+            @media (min-width: 768px){
+                .modal-body p {
+                    font-size: .9rem;
+                }
+                
+            }
+
+            .modal-body img {
+                width: 20%;
+            }
+
+            @media (min-width: 768px) {
+                .modal-body img {
+                    width: 30%;
+                }
+            }
+
+            .modal-footer { 
+                margin-top: 3rem;
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+
+            .btn_modal {
+                padding: 10px 20px;
+                border-radius: 15px;
+                border: none;
+                 border-radius: 15px;
+                 font-family: "Verdana", Sans-serif;
+                 font-size: .9rem;
+                 font-weight: 700;
+                 cursor: pointer;
+                 -webkit-transition: .3s ease-in background-color;
+                -o-transition: .3s ease-in background-color;
+                transition: .3s ease-in background-color;
+            }
+
+            @media (min-width: 768px) {
+                .btn_modal {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .btn_confirm {
+                background-color:  #EC3C96;
+                color:  #F6CA0C;
+
+            }
+
+            .btn_confirm:hover{
+                background-color:  #f676b8;
+            }
+
+            .btn_exit {
+                background-color: transparent;
+                border: 1px solid #522582;
+                
+            }
+
+            .btn_exit:hover {
+                background-color: #ea4444;
+                color:#fff;
+             }
+
+            /* Estilo del botón cerrar */
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    
+    <button id="myBtn">Abrir Modal</button>
+
+        <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <img src="http://localhost/nuncaParesDeAprender/wordpress/wp6merk/wp-content/uploads/2023/04/Info_duotone.png" alt="">
+                <p>En este momento usted está abandonando el sitio web de Merck. Por favor tenga en cuenta que el sitio web al que se dirige no es propiedad ni está controlado por Merck y, por lo tanto, no se encuentra sujeto a nuestras políticas. Merck no tiene injerencia, ni es responsable por el contenido de los resultados. Dicha información y su publicación es responsabilidad del tercero que la publica. El uso de la información publicada en dicho sitio web es de su absoluta responsabilidad.</p>
+            </div>
+            <div class="modal-footer">
+                
+                <button id="confirmBtn" class="btn_modal btn_confirm">Continuar</button>
+                <button id="closeBtn" class="btn_modal btn_exit">Cancelar</button>
+            </div>
+
+     
+            
+        </div>
+    </div>
+
+
+    <script>
+        // Obtener el modal
+var modal = document.getElementById("myModal");
+
+// Obtener el botón que abre el modal
+var btn = document.getElementById("myBtn");
+
+// Obtener el botón cerrar
+var span = document.getElementsByClassName("close")[0];
+
+// Obtener el botón confirmar
+var confirmBtn = document.getElementById("confirmBtn");
+
+// Obtener el botón salir
+var closeBtn = document.getElementById("closeBtn");
+
+// Cuando el usuario haga clic en el botón, abrir el modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// Cuando el usuario haga clic en el botón cerrar, cerrar el modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Cuando el usuario haga clic en el botón salir, cerrar el modal
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Cuando el usuario haga clic en el botón confirmar, hacer algo
+confirmBtn.onclick = function() {
+  // Código a ejecutar cuando se confirma el modal
+  alert("hola")
+}
+    </script>
+</body>
+</html>

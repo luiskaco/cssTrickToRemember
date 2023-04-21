@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+      <!-- Agregamos los CDN de Owl Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  
+
+
+  <style>
+
+  
+
+    .container{
+        width: min(95%, 1200px);/* minimo es 95 max es 120rem*/
+        margin-inline: auto;  
+    }
+
+    .container-causa {
+        background-color: #2DBECD;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        width: 200px;
+        padding: 50px;
+    
+    }
+
+    .owl-carousel div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .causa-img {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .causa-img img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .causa-content {
+        text-align: center;
+    }
+
+    .causa-content h2 {
+        font-size: .7rem;
+        line-height: 1.2;
+        font-weight: bold;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+.owl-item {
+    filter: grayscale(.4);
+}
+.owl-item:nth-child(2).active {
+    filter: none;
+}
+
+  </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="owl-carousel owl-theme">
+            <div>
+                <div class="container-causa">
+                    <div class="causa-img">
+                        <img src="http://localhost/nuncaParesDeAprender/wordpress/wpMerck/wp-content/uploads/2023/04/Causa_1-1.png" alt="">
+                    </div>
+                    <div class="causa-content">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat at commodi quas quisquam molestias? Ab veniam sint saepe est voluptas sed, aliquam voluptat</h2>
+                    </div>
+                </div>
+                
+            </div>
+            <div>
+                <div class="container-causa">
+                    <div class="causa-img">
+                        <img src="http://localhost/nuncaParesDeAprender/wordpress/wpMerck/wp-content/uploads/2023/04/Causa_1-1.png" alt="">
+                    </div>
+                    <div class="causa-content">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat at commodi quas quisquam molestias? Ab veniam sint saepe est voluptas sed, aliquam voluptat</h2>
+                    </div>
+                </div>
+                
+            </div>
+            <div>
+                <div class="container-causa">
+                    <div class="causa-img">
+                        <img src="http://localhost/nuncaParesDeAprender/wordpress/wpMerck/wp-content/uploads/2023/04/Causa_1-1.png" alt="">
+                    </div>
+                    <div class="causa-content">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat at commodi quas quisquam molestias? Ab veniam sint saepe est voluptas sed, aliquam voluptat</h2>
+                    </div>
+                </div>
+                
+            </div>
+            <div>
+                <div class="container-causa">
+                    <div class="causa-img">
+                        <img src="http://localhost/nuncaParesDeAprender/wordpress/wpMerck/wp-content/uploads/2023/04/Causa_1-1.png" alt="">
+                    </div>
+                    <div class="causa-content">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat at commodi quas quisquam molestias? Ab veniam sint saepe est voluptas sed, aliquam voluptat</h2>
+                    </div>
+                </div>
+                
+            </div>
+            <div>
+                <div class="container-causa">
+                    <div class="causa-img">
+                        <img src="http://localhost/nuncaParesDeAprender/wordpress/wpMerck/wp-content/uploads/2023/04/Causa_1-1.png" alt="">
+                    </div>
+                    <div class="causa-content">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat at commodi quas quisquam molestias? Ab veniam sint saepe est voluptas sed, aliquam voluptat</h2>
+                    </div>
+                </div>
+                
+            </div>
+       
+         </div>
+
+    </div>
+
+    <!-- Agregamos jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+    <!-- Agregamos el archivo JavaScript de Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+
+      <script>
+
+        (function() {
+            $(function(){
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                
+                dots: true,
+
+                nav:false,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                      
+                    },
+                    768:{
+                        items:3,
+                        nav:false
+                    },
+                    992:{
+                        items:3,
+                     
+                        loop:false
+                    }
+                }
+            })
+        });
+        })();
+        
+      </script>
+
+</body>
+</html>
