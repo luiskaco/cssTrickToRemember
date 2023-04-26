@@ -20,7 +20,7 @@
     }
     
 
-    @media(min-width:992px){
+    @media(min-width:768px){
         .tab {
    
             justify-content: center;
@@ -136,3 +136,16 @@ a.active .svgImg {
 /* .svgImg:hover {
     fill: #2dbecd;     
 } */
+
+        /*Nuevas Lineas para mejroar el responsive*/
+        
+        @media(max-width:425px) {
+            .tabResponsive{
+                display: block ;
+            }
+    
+    
+            .tabPrincipalResponsive {
+                display: none ;
+            }
+        }

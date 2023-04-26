@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+      <!-- Agregamos los CDN de Owl Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  
+
+
+  <style>
+
+  
+
+        .container{
+            width: min(95%, 1200px);/* minimo es 95 max es 120rem*/
+            margin-inline: auto;  
+        
+        }
+
+        .container-causa {
+            /* background-color: #2DBECD; */
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            width: 200px;
+            padding: 50px;
+        
+        }
+
+        .owl-carousel div{
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+
+        .causa-img {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .causa-img img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .causa-content {
+            text-align: center;
+        }
+
+        .causa-content h2 {
+            font-size: .7rem;
+            line-height: 1.2;
+            font-weight: bold;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .owl-item {
+            filter: grayscale(.4);
+        }
+        .owl-item:nth-child(2).active {
+            filter: none;
+        }
+
+    /*Modal*/
+
+    .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: -50px;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0,0,0,0); 
+            outline: none !important;
+    }   
+
+    /* Estilo del contenido del modal */
+    .modal-content {
+        background-color: #fff;
+        margin: 15% auto; 
+        padding: 20px;
+        border: 1px solid #E7C75F;
+        width: 80%; 
+        height: 300px;
+    }
+
+    @media(min-width:768px) {
+        .modal-content { 
+            width: 50%; 
+        }
+    }
+
+    /* Estilo del botón cerrar */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+    }
+   
+    /*improvisado*/
+    .owlReleative {
+        position: relative;
+    }
+
+    .dbHide {
+        display: none;
+        opacity: 0;
+    }
+
+    .dbShow {
+         opacity: 1;
+        display: block;
+    }
+
+    .container_casua_info{ 
+      
+        transition: opacity 0.5s ease-in-out;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 60%;
+        height: 400px;
+        margin: 0 auto;
+
+        border-radius: 15px;
+       
+        color: #fff;
+        z-index: 40;
+
+      
+    
+    }
+
+    .bg-morado { 
+        background-color: #977AAB;
+    }
+
+    .bg-yellow { 
+        background-color: #F0C462;
+    }
+
+    .bg-blue { 
+        background-color: #82BEE4;
+    }
+
+    .bg-pink {
+        background-color: #E9C6DE;
+        
+    }
+
+    .causa-content { 
+        padding: 2rem 4rem;
+    }
+
+
+
+
+  </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="owlReleative">
+
+    
+                <div class="owl-carousel owl-theme">
+                
+                    <div>
+                        <a href="#" class="myBtn" data-modal-id="myModal1">
+                            <div class="container-causa ">
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Desmotivacion-1-1-2.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="myBtn" data-modal-id="myModal2">
+                            <div class="container-causa ">
+                                <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Desmotivacion-1-1.png" alt="">
+                            </div>
+                        </a>     
+                    </div>
+                    <div>
+                        <a href="#" class="myBtn" data-modal-id="myModal3">
+                            <div class="container-causa">
+                            <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/estrenimiento-4-1.png" alt=""> 
+                            </div>
+                        </a>  
+                    </div>
+                    <div>
+                        <a href="#" class="myBtn" data-modal-id="myModal4">
+                            <div class="container-causa">
+                            <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/nobajardepeso-3-1.png" alt="">  
+                            </div>
+                        </a> 
+                    </div>
+            
+                </div>
+
+        </div>
+
+
+        <div id="myModal1" class="modal ">
+            <div class="modal-content bg-morado">
+                <span class="close">&times;</span>
+                <p>Contenido del modal aquí. 1</p>
+                <button id="confirmBtn">Confirmar</button>
+                <button id="closeBtn">Salir</button>
+            </div>
+        </div>
+
+        <div id="myModal2" class="modal">
+            <div class="modal-content bg-yellow">
+            <span class="close">&times;</span>
+            <p>Contenido del modal aquí. 2</p>
+            <button id="confirmBtn">Confirmar</button>
+            <button id="closeBtn">Salir</button>
+            </div>
+        </div>
+
+        <div id="myModal3" class="modal">
+            <div class="modal-content bg-blue">
+            <span class="close">&times;</span>
+            <p>Contenido del modal aquí. 3</p>
+            <button id="confirmBtn">Confirmar</button>
+            <button id="closeBtn">Salir</button>
+            </div>
+        </div>
+
+        <div id="myModal4" class="modal">
+            <div class="modal-content bg-pink">
+            <span class="close">&times;</span>
+            <p>Contenido del modal aquí. 4</p>
+            <button id="confirmBtn">Confirmar</button>
+            <button id="closeBtn">Salir</button>
+            </div>
+        </div>
+
+
+    <!-- Agregamos jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+    <!-- Agregamos el archivo JavaScript de Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+
+      <script>
+
+
+        
+
+
+        (function() {
+            $(function(){
+
+                const owl = $('.owl-carousel').owlCarousel({
+                           
+                                margin:10,
+                                center:true,
+                                dots: true,
+                                
+                                responsiveClass:true,
+                                responsive:{
+                                0:{
+                                    items:1
+                                },
+                                768:{
+                                    items:3,
+                                    
+                                },
+                                992:{
+                                    items:3,
+                                    
+                                }
+                                }
+                            });
+
+                            owl.find('.owl-item').click(function() {
+                                // Obtén el índice del elemento clicado
+                                    let index = $(this).index();
+                                    console.log(index)
+
+                                    /*Recorrer todos los selector*/
+                                    var allInfo = document.querySelectorAll(`.container_casua_info`)
+
+                                    allInfo.forEach(element => {
+                                        element.classList.add('dbHide');
+                                    });
+
+                                    // const m1 = document.querySelector(`.info-${index}`)
+                                    // m1.classList.remove('dbHide')
+
+                                    // Mueve el carrusel al índice del elemento clicado
+                                    owl.trigger('to.owl.carousel', index);
+                                });
+                            });
+
+
+                        
+                                // Obtener todos los botones de apertura de modal
+                                    var btns = document.querySelectorAll(".myBtn");
+
+                                    // Para cada botón, agregar un evento de clic
+                                    btns.forEach(function(btn) {
+                                    btn.addEventListener("click", function() {
+                                        // Obtener el ID del modal correspondiente
+                                        var modalId = this.getAttribute("data-modal-id");
+
+                                        // Obtener el modal correspondiente
+                                        var modal = document.getElementById(modalId);
+
+                                        // Mostrar el modal
+                                        modal.style.display = "block";
+
+                                        // Agregar evento onclick al objeto window para cerrar el modal al hacer clic fuera de él
+                                        window.onclick = function(event) {
+                                        if (event.target == modal) {
+                                            modal.style.display = "none";
+                                        }
+                                        }
+                                    });
+                                    });
+
+                                    // Obtener todos los botones de cierre de modal
+                                    var closeBtns = document.querySelectorAll(".close");
+
+                                    // Para cada botón, agregar un evento de clic
+                                    closeBtns.forEach(function(closeBtn) {
+                                    closeBtn.addEventListener("click", function() {
+                                        // Obtener el modal padre
+                                        var modal = this.closest(".modal");
+
+                                        // Cerrar el modal
+                                        modal.style.display = "none";
+                                    });
+                                    });
+                    
+        })();
+
+
+      </script>
+
+</body>
+</html>
