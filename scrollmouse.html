@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+        
+        }
+
+        .mouse {
+          background-color: red;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          z-index: 9999;
+          width: 40px;
+          height: 60px;
+          cursor: pointer;
+        }
+
+        .mouse-icon {
+          position: relative;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          border: 2px solid #fff;
+          background-color: #333;
+        }
+
+        .mouse-icon span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: block;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: #fff;
+        }
+
+        .scroll {
+          position: absolute;
+          top: 20px;
+          left: 15px;
+          width: 10px;
+          height: 20px;
+          border-radius: 10px;
+          background-color: #555;
+          animation: scroll 2s ease-in-out infinite;
+        }
+
+        @keyframes scroll {
+          0% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(20px);
+            opacity: 0;
+          }
+        }
+    </style>
+
+</head>
+<body>
+  <div class="mouse">
+    <div class="mouse-icon">
+      <span></span>
+    </div>
+    <div class="scroll"></div>
+  </div>
+
+
+</html>

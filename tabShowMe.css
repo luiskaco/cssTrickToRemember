@@ -125,7 +125,7 @@
         .tabcontent .tab_imagen {
             display: flex;
             flex-direction: column;
-           
+            gap: 2rem;
         
         }
 
@@ -147,7 +147,8 @@
         text-align: center;
         text-decoration: none;
         font-family: "Merck", Sans-serif;
-        font-size:.5rem;
+        color:#EC3C96;
+        font-size:1rem;
     }
 
     @media(max-width:425px){

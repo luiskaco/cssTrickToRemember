@@ -10,181 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   
-
-
-  <style>
-
-  
-
-        .container{
-            width: min(95%, 1200px);/* minimo es 95 max es 120rem*/
-            margin-inline: auto;  
-        
-        }
-
-        .container-causa {
-            /* background-color: #2DBECD; */
-            border-radius: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 200px;
-            width: 200px;
-            padding: 50px;
-        
-        }
-
-        .owl-carousel div{
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
-        }
-
-        .causa-img {
-            width: 100px;
-            height: 100px;
-            background-color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-
-        .causa-img img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-        }
-
-        .causa-content {
-            text-align: center;
-        }
-
-        .causa-content h2 {
-            font-size: .7rem;
-            line-height: 1.2;
-            font-weight: bold;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-
-        .owl-item {
-            filter: grayscale(.4);
-        }
-        .owl-item:nth-child(2).active {
-            filter: none;
-        }
-
-    /*Modal*/
-
-    .modal {
-            display: none; 
-            position: fixed; 
-            z-index: 1; 
-            left: 0;
-            top: -50px;
-            width: 100%;
-            height: 100%;
-            overflow: auto; 
-            background-color: rgba(0,0,0,0); 
-            outline: none !important;
-    }   
-
-    /* Estilo del contenido del modal */
-    .modal-content {
-        background-color: #fff;
-        margin: 15% auto; 
-        padding: 20px;
-        border: 1px solid #E7C75F;
-        width: 80%; 
-        height: 300px;
-    }
-
-    @media(min-width:768px) {
-        .modal-content { 
-            width: 50%; 
-        }
-    }
-
-    /* Estilo del botón cerrar */
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-    }
-   
-    /*improvisado*/
-    .owlReleative {
-        position: relative;
-    }
-
-    .dbHide {
-        display: none;
-        opacity: 0;
-    }
-
-    .dbShow {
-         opacity: 1;
-        display: block;
-    }
-
-    .container_casua_info{ 
-      
-        transition: opacity 0.5s ease-in-out;
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        width: 60%;
-        height: 400px;
-        margin: 0 auto;
-
-        border-radius: 15px;
-       
-        color: #fff;
-        z-index: 40;
-
-      
-    
-    }
-
-    .bg-morado { 
-        background-color: #977AAB;
-    }
-
-    .bg-yellow { 
-        background-color: #F0C462;
-    }
-
-    .bg-blue { 
-        background-color: #82BEE4;
-    }
-
-    .bg-pink {
-        background-color: #E9C6DE;
-        
-    }
-
-    .causa-content { 
-        padding: 2rem 4rem;
-    }
-
-
-
-
-  </style>
+  <link rel="stylesheet" href="./carouselTwo.css">
 
 </head>
 <body>
@@ -229,39 +55,63 @@
         </div>
 
 
-        <div id="myModal1" class="modal ">
+        <div id="myModal1" class="modal" style="display:block;">
             <div class="modal-content bg-morado">
                 <span class="close">&times;</span>
-                <p>Contenido del modal aquí. 1</p>
-                <button id="confirmBtn">Confirmar</button>
-                <button id="closeBtn">Salir</button>
+
+                <div class="container_modal">
+                    <div class="modal_image">
+                            <img class="imageAvatar" src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Desmotivacion-1-1-1.png" alt="">
+                            <img class="imageidea" src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Box-1-1.png" alt="">
+                            <p>
+                                No quiero trabajar, ni juerguear y menos hacer el delicioso. Si te sientes igual, puede que tu Tiroides esté malita.</p>
+                    </div>
+                    <div class="modal_content">
+
+                        <div class="modal_title">
+                            <h2>Desmotivación</h2>
+                            <p>Jany Ganas</p>
+                        </div>
+
+                        <div class="modal_info">
+                            <p>Muchos de los síntomas del hipotiroidismo pueden ser confundidos con otras condiciones. Menos energía, fatiga, dificultad para despertarse por la mañana, necesidad de dormir más y tendencia a quedarse dormido durante el día son algunas de los más frecuentes. Fuente: American Thyroid Association. Hypothyroidism a booklet fot patients and their families. 
+                                <a href="https://www.thyroid.org/wp-content/uploads/patient/brochures/Hypothyroidism_web_booklet.pdf?=pdf=Hypothyroidism%20Booklet">Información aquí</a>
+                            </p>
+
+                        </div>
+
+                    </div>
+           
+                </div>
+               
             </div>
         </div>
 
         <div id="myModal2" class="modal">
             <div class="modal-content bg-yellow">
-            <span class="close">&times;</span>
-            <p>Contenido del modal aquí. 2</p>
-            <button id="confirmBtn">Confirmar</button>
-            <button id="closeBtn">Salir</button>
+
+                <div>
+                    <p>Contenido del modal aquí. 2</p>
+                </div>
+
             </div>
         </div>
 
         <div id="myModal3" class="modal">
             <div class="modal-content bg-blue">
-            <span class="close">&times;</span>
-            <p>Contenido del modal aquí. 3</p>
-            <button id="confirmBtn">Confirmar</button>
-            <button id="closeBtn">Salir</button>
+
+                <div>
+                    <p>Contenido del modal aquí. 3</p>
+                </div>
+
             </div>
         </div>
 
         <div id="myModal4" class="modal">
             <div class="modal-content bg-pink">
-            <span class="close">&times;</span>
-            <p>Contenido del modal aquí. 4</p>
-            <button id="confirmBtn">Confirmar</button>
-            <button id="closeBtn">Salir</button>
+               <div>
+                    <p>Contenido del modal aquí. 4</p>
+                </div>
             </div>
         </div>
 
