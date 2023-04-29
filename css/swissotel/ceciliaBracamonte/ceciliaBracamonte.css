@@ -1,0 +1,251 @@
+@import 'https://use.fontawesome.com/releases/v5.15.2/css/all.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+
+:root {
+    /** FUENTE **/
+    --fontNewyork: 'NewYork', sans-serif;
+    --fontRaleway: 'Raleway-Regular', sans-serif;
+    --fontMonserrat: 'Montserrat', sans-serif;
+    --fontFogtwono5: 'Fogtwono5', Arial, Sans-serif ;
+    --fontWestiba: 'WestivaRegular', Arial,Sans-serif; 
+    /* Color */
+    --gris: #8A8E8F;
+    --grisn2:#A39FA0;
+    --negroN1: #46494A;
+    --marronN1: #9C6261;
+    --blanco:#fff;
+    
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+.container{
+    width: min(95%, 1200px);/* minimo es 95 max es 120rem*/
+    margin-inline: auto;  
+}
+
+.container-fluid {
+    width: 100%;
+    max-width: 1200px; /*o cualquier valor que desees*/
+    margin: 0 auto; /*para centrar el contenedor en la pantalla*/
+}
+
+
+h1, h2, h3,h4, h5,  p {
+    letter-spacing: unset !important;
+     margin:0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    text-transform:unset;
+    line-height:1.2 !important;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.text-bold-900{
+    font-weight: 900;
+}
+
+/*  */
+
+.hero--bg {
+
+    background-size: 100%;
+    
+    overflow: hidden;
+    position: relative;
+   
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-image:url(https://www.swissotellima.com.pe/wp-content/uploads/2023/04/tiempo_mama_movil.jpg) ;
+}
+
+@media(min-width:768px){
+    .hero--bg {
+        background-image:url(https://www.swissotellima.com.pe/wp-content/uploads/2023/04/tiempo_mama_tablet.jpg) ;
+    }
+    
+}
+
+@media(min-width:992px){
+    .hero--bg {
+        background-image:url(https://www.swissotellima.com.pe/wp-content/uploads/2023/04/tiempo_mama_desktop.jpg) ;
+    }
+}
+
+.container-hero {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    text-align: center; 
+}
+
+.container-desc {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 4rem;
+
+    padding: 1rem .8rem ;
+    
+}
+
+.container-desc h1 {
+    font-style: italic;
+    color: var(--gris);
+    font-family: var(--fontFogtwono5);
+    font-weight: 500;
+
+    font-size: 1.3rem;
+}
+
+    @media(min-width 768px){
+        .container-desc h1 {
+            
+         font-size: 3rem;
+        }
+    }
+
+.desc-button {
+    position: relative;
+    text-align: center;
+
+    background-color: #9C6261;
+    width: 90%;
+    margin-inline:auto;
+    display: block;
+
+    padding: 1rem 1rem;
+
+    transition: .3s ease-in-out all;
+    cursor: pointer;
+}
+
+    @media(min-width:768px){
+        .desc-button {
+            width: 40%;
+        }
+    }
+
+    @media(min-width:768px){
+        .desc-button:after {
+            content: "";
+            background-image: url(https://www.swissotellima.com.pe/wp-content/uploads/2023/04/190x150.png);
+            background-repeat: no-repeat;
+            background-size: 90%;
+            position:absolute;
+            top:-10%;
+            left: -90px;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .desc-button:before{
+            content: "";
+            background-image: url(https://www.swissotellima.com.pe/wp-content/uploads/2023/04/190x150_2.png);
+            background-repeat: no-repeat;
+            background-size: 90%;
+            position:absolute;
+            top:-10%;
+            right: -90px;
+        
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+
+.desc-button:hover{
+    background-color: #b48382;
+}
+
+.desc-button a {
+    text-decoration: none;
+    color: var(--blanco);;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: var(--fontFogtwono5);
+    
+}
+
+
+/*Almnuerzoo*/
+.bg-almuerzo{
+    background-image:url(https://www.swissotellima.com.pe/wp-content/uploads/2023/04/919x975.png) ;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.lunch-content {
+    height: 700px;
+    padding: 3rem 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.lunch-head .lucha-date {
+    font-family: var(--fontFogtwono5);
+    background-color: #9C6261;
+    width: 100%;
+    margin-inline:auto;
+    display: block;
+
+    padding: 1rem 1rem;
+}
+
+    .lucha-date:after {
+        content: "";
+        background-image: url(https://www.swissotellima.com.pe/wp-content/uploads/2023/04/190x150.png);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        position:absolute;
+        top:-10%;
+        left: -90px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .lucha-date:before{
+        content: "";
+        background-image: url(https://www.swissotellima.com.pe/wp-content/uploads/2023/04/190x150_2.png);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        position:absolute;
+        top:-10%;
+        right: -90px;
+
+        width: 200px;
+        height: 200px;
+    }
+
+.lunch-head .lucha-date h3 {
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: var(--fontFogtwono5);
+    font-weight: 600;
+}
+
