@@ -89,25 +89,70 @@ h1, h2, h3,h4, h5,  p {
     }
 }
 
-.container-hero {
+.hero-content {
     height: 100vh; 
     display: flex;
     flex-direction: column;
 
-    justify-content: center;
-    text-align: center; 
+    justify-content: start;
+    align-items: center;
+
+    padding-top: 8rem;
+  
 }
 
+        @media (min-width: 768px) {
+            .hero-content { 
+
+                justify-content: center;
+                align-items: start;
+                padding-top: unset;
+            }
+        }
+
+   
+    .logo img{
+        width: 100%;
+      
+    }
+
+        @media (min-width: 768px) {
+            .logo img{
+                width: 70%;
+                margin-left:7rem;
+            }
+        }
+
+    .logomessage img {
+        width: 100%;
+    }
+
+        @media (min-width: 768px) {
+            .logomessage img {
+                width: 60%;
+            }
+        }
 
 
 /* Resume  */
 .resume--bg {
     background-color: #f8f8f8;
-    background-color: #EBD1D2;
+ 
     background-image:url();
     background-size:cover;
     background-repeat: no-repeat;
-    background-image: url(https://www.swissotellima.com.pe/wp-content/uploads/2023/04/1800x600.jpg);
+   
+}
+
+@media(min-width:768px){
+    .resume--bg {
+        background-color: #f8f8f8;
+     
+
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-image: url(https://www.swissotellima.com.pe/wp-content/uploads/2023/04/1800x600.jpg);
+    }
 }
 
 .info-content {
@@ -117,8 +162,15 @@ h1, h2, h3,h4, h5,  p {
     align-items: center;
 }
 
+@media(min-width:768px) {
+    .info-content { 
+        width: 800px;
+        margin-inline: auto;
+    }
+}
+
 .info-content h1 {
-    font-family: var(--fontFogtwono5);
+    font-family: var(--fontRaleway);
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.2;
@@ -168,6 +220,24 @@ h1, h2, h3,h4, h5,  p {
     }
 }
 
+/* Solo aplica al segundo */
+    @media (max-width: 425px) {
+        .dulzura_one  {
+        
+            order:2;
+        }
+
+        .dulzura_two { 
+        
+            order:1
+        }
+    }
+/* Solo aplica al segundo */
+
+
+
+
+
 .confor-content { 
     
     padding: 4rem 2rem;
@@ -176,7 +246,7 @@ h1, h2, h3,h4, h5,  p {
     justify-content: center;
     gap: 2rem;
 
-    grid-column:  / span 1;
+   
 }
 
     @media(min-width:768px){
@@ -192,7 +262,7 @@ h1, h2, h3,h4, h5,  p {
     font-weight: bold;
     color: var(--negroN1);
     font-weight: bold;
-    font-family: var(--fontFogtwono5);
+    font-family: var(--fontRaleway);
     text-align: center;
 }
 
@@ -207,7 +277,7 @@ h1, h2, h3,h4, h5,  p {
     font-weight: bold;
     font-size: 2rem;
     color: var(--marronN1);
-    font-family: var(--fontFogtwono5);
+    font-family: var(--fontRaleway);
     text-align: center;
         
  }
@@ -240,7 +310,7 @@ h1, h2, h3,h4, h5,  p {
     padding: 8px;
     margin: 0 auto;
     font-weight: bold;
-    font-family: var(--fontFogtwono5);
+    font-family: var(--fontRaleway);
     line-height: 1.2em;
     text-align: center;
     
@@ -272,7 +342,7 @@ h1, h2, h3,h4, h5,  p {
 }
 
  .content-body ul  li {
-    font-family: var(--fontFogtwono5);
+    font-family: var(--fontRaleway);
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.2em;
@@ -295,7 +365,7 @@ h1, h2, h3,h4, h5,  p {
 
  .content-body-intern h3 {
     margin-top: 2rem;
-    font-family: var(--fontFogtwono5);
+    font-family: var(--fontRaleway);
     font-size: 1.2rem;
     font-weight: 400;
     color: var(--negroN1);
@@ -315,7 +385,7 @@ h1, h2, h3,h4, h5,  p {
 
  .content-body-intern .content-price {
      
-        font-family: var(--fontFogtwono5);
+        font-family: var(--fontRaleway);
         font-size: 2.5rem;
         font-weight: 400;
         color: var(--blanco);
@@ -360,7 +430,7 @@ h1, h2, h3,h4, h5,  p {
 }
  
  .content-footer-a {
-    font-family: var(--fontFogtwono5);
+    font-family: var(--fontRaleway);
     font-weight: bold;
 
     line-height: 1.2em;
@@ -408,7 +478,7 @@ h1, h2, h3,h4, h5,  p {
 /* Tterminos y condiciones */
 .condiciones-content{
 
-    padding: 5rem  3rem;
+    padding: 5rem  1rem;
     display:flex;
     flex-direction: column;
     gap: 1rem;
@@ -419,12 +489,13 @@ h1, h2, h3,h4, h5,  p {
 
 @media(min-width:768px){
     .condiciones-content{
+        padding: 5rem  3rem;
         height: 500px;
     }
 }
 
 .condiciones-content p {
-    font-family: var(--fontFogtwono5);
+    font-family: var(--fontRaleway);
     font-size: .9rem;
     font-weight: normal;
 }
@@ -444,7 +515,7 @@ h1, h2, h3,h4, h5,  p {
 
 .message-content h3 {
     color: #fff;
-    font-family: var(--fontFogtwono5);
+    font-family: var(--fontRaleway);
     font-weight: normal;
     line-height: 1.2em;
     font-size: 2rem;
