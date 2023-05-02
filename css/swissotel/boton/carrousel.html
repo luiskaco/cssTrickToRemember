@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+     <!-- Agregamos los CDN de Owl Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  
+
+   <!-- Agregamos jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+    <!-- Agregamos el archivo JavaScript de Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+
+            (function() {
+                $(function(){
+                $('.owl-carousel').owlCarousel({
+                    loop:true,
+                    margin:10,
+                    dots: true,
+                    nav:true,
+                    autoplay:false,
+                    autoplayTimeout:5000,
+                    autoplayHoverPause:false,
+                    responsiveClass:true,
+                    responsive:{
+                        0:{
+                            items:1,
+                            
+                        },
+                        768:{
+                            items:1,
+                            nav:false
+                        },
+                        992:{
+                            items:1,
+                            loop:false
+                        }
+                    }
+                })
+            });
+            })();
+
+
+    </script>
+
+    <style>
+
+        .container{
+            width: min(95%, 1200px);/* minimo es 95 max es 120rem*/
+            margin-inline: auto;  
+        }
+
+        .item {
+     
+        }
+
+        .item img {
+           width: 100%;
+        }
+
+        .desmotivacion_desktop {
+            display: none !important;
+        }
+
+        .desmotivacion_movil {
+            display: block !important;
+        }
+
+        @media(min-width:768px){
+            .desmotivacion_desktop {
+                display: block !important;
+            }
+
+            .desmotivacion_movil {
+                display: none !important;
+            }
+
+        }
+
+        
+        .owl-theme .owl-dots .owl-dot span {
+            width: 10px;
+            height: 10px;
+            margin: 5px 7px;
+            background: #EDB4DD;
+            display: block;
+            -webkit-backface-visibility: visible;
+            transition: opacity .2s ease;
+            border-radius: 30px;
+        }
+
+        @media(min-width:768px){
+            .owl-theme .owl-dots .owl-dot span {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+            background:  #B2549A;
+        }
+        
+        .owl-carousel {
+              position: relative;
+        }
+
+        .owl-nav {
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+            font-size: 4rem;
+            display: none;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        .owl-prev {
+            left: 0;
+        /* transform: translateX(-50%); */
+        }
+
+        .owl-next {
+             right: 0;
+        /* transform: translateX(50%); */
+        }
+
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        @media (min-width: 768px) {
+            .owl-nav {
+                display: block;
+            }
+        }
+
+
+
+        /*
+            #EDB4DD
+            #B2549A
+        */
+    </style>
+
+
+    <div class="container">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img class="desmotivacion_desktop" src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/desmotivacion-1.jpg" alt="desmotivacion desktop">
+                <img class="desmotivacion_movil" src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/desmotivacion_movil.jpg" alt="desmotivacion movil">
+            
+            </div>
+            <div class="item">  
+                <img class="desmotivacion_desktop" src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/Slide-PerdidadeCabello-02-02-1.jpg" alt="image de PerdidadeCabello">
+                <img class="desmotivacion_movil" src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/peridda_de_cabello_movil.jpg" alt="image de PerdidadeCabello movil">
+               
+
+            </div>
+            <div class="item">
+                <img class="desmotivacion_desktop" src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/estrenimiento-4.jpg" alt="imagen de estrenimiento">
+                <img class="desmotivacion_movil" src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/estrenimiento_movil.jpg" alt="imagen de estrenimiento movil">
+            
+            </div>
+            <div class="item">
+                <img class="desmotivacion_desktop" src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/nobajardepeso-3.jpg" alt="imagen no bajar de peso">
+                <img class="desmotivacion_movil" src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/no_bajar_de_peso_movil.jpg" alt="Imagen no bajar de peso movil">
+
+            </div>
+
+
+        </div>
+    </div>
+   
+</body>
+</html>
