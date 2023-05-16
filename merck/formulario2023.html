@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .container{
+            width: min(95%, 1200px);/* minimo es 95 max es 120rem*/
+            margin-inline: auto;  
+        }
+        
+        .dbH{
+            display: none !important;
+        }
+        
+        .container_widzard {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+        }
+        
+        
+        @media (min-width: 992px) {
+            .container_widzard {
+                width: 70%;
+            }
+        }
+        
+        .widzar_head {
+            border-radius: 20px;
+            background-color: #EC3C96;
+            height: 200px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        
+        
+            box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.20);
+            -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.20);
+            -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.20);
+        }
+        
+        .widzar_head h2 {
+            margin: 0;  
+            color: #fff; 
+            font-family: "Merck", Sans-serif;
+            font-weight: 700;
+            font-size: 1.rem;
+            text-transform: uppercase;
+            
+        }
+        
+            @media(min-width:768px){
+                .widzar_head h2 {
+                    font-size: 2.5rem;
+                }
+            }
+        
+        .widzar_head p {
+            font-family: "Verdana", Sans-serif;
+            font-weight: 400;
+            font-size: .9rem;
+            color:#F6CA0C;
+            text-transform: uppercase;
+        }
+        
+            @media(min-width:768px){
+                .widzar_head p { 
+                    font-size: 1.5rem;
+                }
+            }
+        
+        .widzar_question {
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            /* gap: 1rem; */
+            background-color: #fff;
+            box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.20);
+            -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.20);
+            -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.20);
+            
+            padding: 1.7rem 0;
+        
+        }
+        
+            @media(min-width:768px) {
+                .widzar_question {
+                    flex-direction: row;
+                    padding: unset;
+                }
+            }
+        
+        
+        .gender-image  {
+            flex:0 1 50%;   
+            text-align: center;
+        }
+        
+        .gender-image img { 
+        
+            max-width: 100%;
+            width: 50%;
+            object-fit: contain;
+            flex:1 0 50%;
+        }
+        
+            @media (min-width: 768px) {
+                .gender-image img {
+                    Swidth: 100%;
+                    height: 220px;
+                    border-radius: 20px  0  0 20px;
+                }
+            }
+        
+        .gender-body {
+            flex:1;
+            
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        
+        }
+        
+            @media (min-width: 768px) {
+                .gender-body {
+                    height: unset;
+                    flex:1 0 50%;
+                }
+            }
+        
+        .question_title {
+            width: 200px;
+        }
+        
+        .question_title h2{
+            font-family: "Verdana", Sans-serif;
+            font-weight: 400;
+            font-size: .8rem;
+            text-align: center;
+            color: #EC3C96;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .gender-selector {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        
+        /* input radio */
+        
+        input[type="radio"] {
+            display: none;
+        }
+        
+        .gender-selector  label {
+            display: inline-block;
+        
+            padding: 10px;
+            margin: 15px;
+            font-size: .9rem;
+            font-weight: bold;
+            color: #EC3C96;
+            background-color: transparent;
+            border-radius: 20px;
+            border: 2px solid #EC3C96;
+            cursor: pointer;
+            font-family: "Verdana", Sans-serif;
+        
+            transition: all 0.3s ease-in-out;
+        }
+        
+        input[type="radio"]:checked + label {
+            background-color: #EC3C96;
+            color:#fff;
+        }
+        
+        .circle-selector {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .circle-selector label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            margin: 5px;
+        
+            font-weight: bold;
+            font-family: "Verdana", Sans-serif;
+        
+            line-height: 1.5;
+            font-size: .9rem;
+            font-weight: bold;
+            text-align: center;
+            color: #EC3C96;
+            background-color: transparent;
+            border: 2px solid #EC3C96;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .gender-selector  label:hover, 
+        .circle-selector label:hover {
+            background-color: #EC3C96;
+            color: white;
+        }
+        
+        /*iput*/
+        
+        input[type="number"] {
+            border: 2px solid #EC3C96;
+            border-radius: 20px;
+            font-family: "Verdana", Sans-serif;
+            font-size: .9rem;
+            padding: 10px;
+            font-size: 20px;
+            color: #EC3C96;
+            outline: none;
+            width: 150px; 
+            margin: 0 auto; 
+            text-align: center;
+        
+        }
+        ::placeholder {
+            text-align: center;
+            color: #EC3C96; 
+            font-size: .9rem;t
+        }
+        
+        .widzar_footer {
+            height: 200px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        
+        .widzar_footer .botón {
+            background-color: #EC3C96;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: "Verdana", Sans-serif;
+        
+            transition: ease-in-out .3s background-color;
+        }
+        
+        .widzar_footer .botón:hover {
+            background-color: #f359a9;
+        }
+        
+        .widzar_footer 
+            .botón::after {
+                content: "";
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-image: url(https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Group-10-1.png);
+                background-size: cover;
+                margin-left: 10px;
+            }
+        
+        
+            /*  Resultado  */
+        
+            .container-result {
+                display: flex;
+                width: 100%;
+                margin-inline: auto;
+                text-align: left;
+                flex-direction: column;
+                padding: 2rem 0;
+            }
+        
+            @media (min-width: 768px) {
+                .container-result {
+                    flex-direction: row;
+                    width: 50%;
+                
+                }
+            }
+        
+            .result-img img {
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+            }
+        
+            .result-img {
+                flex: 1;
+                
+            }
+        
+            .result-content {
+                flex:1;
+                padding: 20px;
+            }
+        
+            .result-content p {
+                font-family: "Verdana", Sans-serif;
+                font-weight: 400;
+                color: #503291;
+                font-size: .9rem;
+                margin-bottom: 1rem;
+            }
+        
+            .result-content h2 {
+                font-family: "Merck", Sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+                margin: 0;
+                color:#EC3C96;
+                margin-bottom: 2rem;
+            }
+        
+        /*.space-result {*/
+        /*    margin: 3rem 0;*/
+        /*}*/
+    </style>
+    
+    
+    <div class="container">
+    
+             <!-- formulario preguntas -->
+             <div class="container_widzard " id="container_widzard">
+                    <div class="widzar_head">
+                         <h2>EVALúA TU TIROIDES</h2>
+                         <p>CUESTIONARIO</p>
+                    </div>
+    
+                    <form id="myForm">
+                            <div class="widzar_question">
+                                <div class="gender-image">
+                          
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/icono-1.png" alt="Imagen pregunta 1">
+                                </div>
+                                <div class="gender-body">
+                                    <div class="question_title">
+                                        <h2>género</h2>
+                                    </div>
+                                    <div class="gender-selector">
+                                        <input type="radio" id="male" name="gender" value="male">
+                                        <label for="male">Masculino</label>
+                                        <input type="radio" id="female" name="gender" value="female">
+                                        <label for="female">Femenino</label>
+                                       
+                                    </div>
+                                </div>
+                            
+                            </div>
+    
+                            <div class="widzar_question">
+                                <div class="gender-image">
+                         
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/icono-2.png" alt="Imagene pregunta 2">
+                                </div>
+                                <div class="gender-body">
+                                    <div class="question_title">
+                                        <h2>Edad</h2>
+                                    </div>
+                                
+                                    <div class="input-selector">
+                                        <input type="number" value="" name="ages" placeholder="Escribe aquí">
+                                    </div>
+                                </div>   
+                            
+                            </div>
+    
+                            <!-- Pregunta 3   -->
+                            <div class="widzar_question">
+                                <div class="gender-image">
+                        
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/icono-3.png" alt="Imagene pregunta 3">
+                                </div>
+                                <div class="gender-body">
+                                    <div class="question_title">
+                                        <h2>¿Sudas muy poco,
+                                            incluso en los días de
+                                            calor?</h2>
+                                    </div>
+                                
+                                    <div class="circle-selector">
+                                        <input type="radio" id="si" name="question3" value="1">
+                                        <label for="si">SI</label>
+                                        <input type="radio" id="no" name="question3" value="0">
+                                        <label for="no">NO</label>
+                                    </div>
+                                </div>   
+                            
+                            </div>
+    
+                            <!-- Pregunta 4   -->
+                            <div class="widzar_question">
+                                <div class="gender-image">
+                           
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/icono-4.png" alt="Imagene pregunta 4">
+                                </div>
+                                <div class="gender-body">
+                                    <div class="question_title">
+                                        <h2>Cuando hablas o cantas,
+                                            ¿tienes que aclararte la
+                                            garganta regularmente?</h2>
+                                    </div>
+                                
+                                    <div class="circle-selector">
+                                        <input type="radio" id="si4" name="question4" value="1">
+                                        <label for="si4">SI</label>
+                                        <input type="radio" id="no4" name="question4" value="0">
+                                        <label for="no4">NO</label>
+                                    </div>
+                                </div>   
+                            </div>
+    
+                            <!-- Pregunta 5   -->
+                            <div class="widzar_question">
+                                <div class="gender-image">
+                        
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/icono-5.png" alt="Imagene pregunta 5">
+                                </div>
+                                <div class="gender-body">
+                                    <div class="question_title">
+                                        <h2>¿Tienes la sensación de
+                                            cosquilleo, hormigueo o ardor
+                                            sin causa aparente?</h2>
+                                    </div>
+                                
+                                    <div class="circle-selector">
+                                        <input type="radio" id="si5" name="question5" value="1">
+                                        <label for="si5">SI</label>
+                                        <input type="radio" id="no5" name="question5" value="0">
+                                        <label for="no5">NO</label>
+                                    </div>
+                                </div>   
+                            </div>
+    
+                            <!-- Pregunta 6   -->
+                            <div class="widzar_question">
+                                <div class="gender-image">
+                          
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/icono-6.png" alt="Imagene pregunta 6">
+                                </div>
+                                <div class="gender-body">
+                                    <div class="question_title">
+                                        <h2>¿Sufres resequedad en
+                                            la piel o tienes piel muy seca?</h2>
+                                    </div>
+                                
+                                    <div class="circle-selector">
+                                        <input type="radio" id="si6" name="question6" value="1">
+                                        <label for="si6">SI</label>
+                                        <input type="radio" id="no6" name="question6" value="0">
+                                        <label for="no6">NO</label>
+                                    </div>
+                                </div>   
+                            </div>
+    
+                            <!-- Pregunta 7   -->
+                            <div class="widzar_question">
+                                <div class="gender-image">
+                       
+                                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/icono-7.png" alt="Imagene pregunta 7">
+                                </div>
+                                <div class="gender-body">
+                                    <div class="question_title">
+                                        <h2>¿Sufres de estreñimiento
+                                            o problemas digestivos?</h2>
+                                    </div>
+                                
+                                    <div class="circle-selector">
+                                        <input type="radio" id="si7" name="question7" value="1">
+                                        <label for="si7">SI</label>
+                                        <input type="radio" id="no7" name="question7" value="0">
+                                        <label for="no7">NO</label>
+                                    </div>
+                                </div>   
+                            </div>
+    
+                            <!-- Pregunta 8   -->
+                                <div class="widzar_question">
+                                    <div class="gender-image">
+                     
+                                        <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/icono-8.png" alt="Imagene pregunta 8">
+                                    </div>
+                                    <div class="gender-body">
+                                        <div class="question_title">
+                                            <h2>¿Has perdido la capacidad
+                                                auditiva poco a poco?</h2>
+                                        </div>
+                                    
+                                        <div class="circle-selector">
+                                            <input type="radio" id="si8" name="question8" value="1">
+                                            <label for="si8">SI</label>
+                                            <input type="radio" id="no8" name="question8" value="0">
+                                            <label for="no8">NO</label>
+                                        </div>
+                                    </div>   
+                                </div>
+    
+                                <!-- Pregunta 9   -->
+                                <div class="widzar_question">
+                                    <div class="gender-image">
+                        
+                                        <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/icono-9.png" alt="Imagene pregunta 9">
+                                    </div>
+                                    <div class="gender-body">
+                                        <div class="question_title">
+                                            <h2>¿Has ganado peso sin
+                                                motivo aparente?</h2>
+                                        </div>
+                                    
+                                        <div class="circle-selector">
+                                            <input type="radio" id="si9" name="question9" value="1">
+                                            <label for="si9">SI</label>
+                                            <input type="radio" id="no9" name="question9" value="0">
+                                            <label for="no9">NO</label>
+                                        </div>
+                                    </div>   
+                                </div>
+    
+                                <!-- Pregunta 10   -->
+                                <div class="widzar_question">
+                                    <div class="gender-image">
+                        
+                                        <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/icono-10.png" alt="Imagene pregunta 10">
+                                    </div>
+                                    <div class="gender-body">
+                                        <div class="question_title">
+                                            <h2>¿Sientes que la piel de
+                                                tus manos, codos o antebrazos
+                                                es más gruesa?</h2>
+                                        </div>
+                                    
+                                        <div class="circle-selector">
+                                            <input type="radio" id="si10" name="question10" value="1">
+                                            <label for="si10">SI</label>
+                                            <input type="radio" id="no10" name="question10" value="0">
+                                            <label for="no10">NO</label>
+                                        </div>
+                                    </div>   
+                                </div>
+                                
+                                <!-- Pregunta 11   -->
+                                <div class="widzar_question">
+                                    <div class="gender-image">
+                                        <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/icono-11.png" alt="Imagene pregunta 11">
+                                    </div>
+                                    <div class="gender-body">
+                                        <div class="question_title">
+                                            <h2>¿Tus movimientos se han vuelto lentos?</h2>
+                                        </div>
+                                    
+                                        <div class="circle-selector">
+                                            <input type="radio" id="si11" name="question11" value="1">
+                                            <label for="si11">SI</label>
+                                            <input type="radio" id="no11" name="question11" value="0">
+                                            <label for="no11">NO</label>
+                                        </div>
+                                    </div>   
+                                </div>
+                                
+                                <!-- Pregunta 12   -->
+                                <div class="widzar_question">
+                                    <div class="gender-image">
+                                        <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/icono-12.png" alt="Imagene pregunta 12">
+                                    </div>
+                                    <div class="gender-body">
+                                        <div class="question_title">
+                                            <h2>¿Tu velocidad de reacción es lenta?</h2>
+                                        </div>
+                                    
+                                        <div class="circle-selector">
+                                            <input type="radio" id="si12" name="question12" value="1">
+                                            <label for="si12">SI</label>
+                                            <input type="radio" id="no12" name="question12" value="0">
+                                            <label for="no12">NO</label>
+                                        </div>
+                                    </div>   
+                                </div>
+                                
+     
+                               <!-- Pregunta 13   -->
+                                <div class="widzar_question">
+                                    <div class="gender-image">
+                                        <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/icono-13.png" alt="Imagene pregunta 14">
+                                    </div>
+                                    <div class="gender-body">
+                                        <div class="question_title">
+                                            <h2>¿Haz notado algún tipo de hinchazón?</h2>
+                                        </div>
+                                    
+                                        <div class="circle-selector">
+                                            <input type="radio" id="si13" name="question13" value="1">
+                                            <label for="si13">SI</label>
+                                            <input type="radio" id="no13" name="question13" value="0">
+                                            <label for="no13">NO</label>
+                                        </div>
+                                    </div>   
+                                </div>
+                                
+                                   <!-- Pregunta 14   -->
+                                <div class="widzar_question">
+                                    <div class="gender-image">
+                                        <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/05/icono-14.png" alt="Imagene pregunta 14">
+                                    </div>
+                                    <div class="gender-body">
+                                        <div class="question_title">
+                                          <h2>¿Sientes a menudo frío en manos y pies?</h2>
+                                        </div>
+                                    
+                                        <div class="circle-selector">
+                                            <input type="radio" id="si14" name="question14" value="1">
+                                            <label for="si14">SI</label>
+                                            <input type="radio" id="no14" name="question14" value="0">
+                                            <label for="no14">NO</label>
+                                        </div>
+                                    </div>   
+                                </div>
+                                
+                                
+                             
+    
+    
+    
+                        <div class="widzar_footer">
+                            <button  class="botón" type="submit" id="submitButton">Ver Resultados</button>
+                        </div>
+                    </form>
+    
+             </div>
+                <!-- formulario preguntas -->
+    
+            <div class="container-result space-result dbH" id="container-result">
+                <div class="result-img">
+                    <img src="https://proyecto.orange-360.com/web/merckWeb/wp-content/uploads/2023/04/Rectangle-613.png" alt="imagen resultado">
+                </div>
+                <div class="result-content" >
+                <!--    <p>Gracias por contarme tus síntomas. -->
+                <!--        Tienes <span id="resultoTotal"></span> puntos y tus respuestas sugieren que probablemente tienes un problema de tiroides, pero por favor habla con tu médico para confirmarlo.Acude siempre a tu médico para realizar una prueba de tiroides rápida y sencilla.-->
+                <!--</p> -->
+                    
+                <p id="resultoTotal">
+                    
+                </p>    
+                    
+                <h2>¿Estás dispuesto a ver un especialista? </h2>
+                    <div class="circle-selector">
+                        <input type="radio" id="agreeSi" name="agree" value="1">
+                        <label for="agreeSi">SI</label>
+                        <input type="radio" id="agreeNo" name="agree" value="0">
+                        <label for="agreeNo">NO</label>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+        
+        <script>
+    
+              const constraints = {
+                        gender: {
+                            presence: { message: "El género es obligatorio" },
+                        },
+                        ages: {
+                            presence: { message: "La edad es obligatoria" },
+                            numericality: {
+                            onlyInteger: true,
+                            greaterThan: 0,
+                            lessThanOrEqualTo: 120,
+                            message: "La edad debe ser un número entero positivo menor o igual a 120"
+                            }
+                        },
+                        question3: {
+                            presence: { message: "La pregunta 3 es obligatoria" },
+                        },
+                        question4: {
+                            presence: { message: "La pregunta 4 es obligatoria" },
+                        },
+                        question5: {
+                            presence: { message: "La pregunta 5 es obligatoria" },
+                        },
+                        question6: {
+                            presence: { message: "La pregunta 6 es obligatoria" },
+                        },
+                        question7: {
+                            presence: { message: "La pregunta 7 es obligatoria" },
+                        },
+                        question8: {
+                            presence: { message: "La pregunta 8 es obligatoria" },
+                        },
+                        question9: {
+                            presence: { message: "La pregunta 9 es obligatoria" },
+                        },
+                        question10: {
+                            presence: { message: "La pregunta 10 es obligatoria" },
+                        },
+                        question11:{
+                             presence: { message: "La pregunta 11 es obligatoria" },
+                        },
+                          question12:{
+                               presence: { message: "La pregunta 12 es obligatoria" },		
+                          },
+                        question13:{
+                               presence: { message: "La pregunta 13 es obligatoria" },		
+                          },
+                        question14:{
+                               presence: { message: "La pregunta 14 es obligatoria" },		
+                          },
+                      
+    
+             
+                    };
+    
+    
+                const form = document.querySelector("#myForm");
+    
+                    form.addEventListener("submit", function (event) {
+                    event.preventDefault();
+    
+                    const formData = new FormData(form);
+                    const values = Object.fromEntries(formData.entries());
+    
+                    const errors = validate(values, constraints);
+    
+                    if (errors) {
+                        // const errorMessages = Object.values(errors).join("\n");
+                        // alert("Por favor, corrija los siguientes errores:\n\n" + errorMessages);
+    
+                        Swal.fire(
+                            'Revisar',
+                            'Es necesario que complete todas las preguntas',
+                            'error'
+                            )
+
+                            return;
+    
+                        // alert("Debe selecionar todas las pregunras")
+                    } else {
+                        // Enviar el formulario
+    
+                        // alert(Object.values(values))
+                        // 
+                     
+            
+                        const valor_question33 = document.getElementsByName("question3");
+                        for (let i = 0; i < valor_question33.length; i++) {
+                          if (valor_question33[i].checked) {
+                            result3 = valor_question33[i].value;
+                            break;
+                          }
+                        }
+                        
+                        const valor_question44 = document.getElementsByName("question4");
+                        for (let i = 0; i < valor_question44.length; i++) {
+                          if (valor_question44[i].checked) {
+                            result4 = valor_question44[i].value;
+                            break;
+                          }
+                        }
+                        
+                        const valor_question55 = document.getElementsByName("question5");
+                        for (let i = 0; i < valor_question55.length; i++) {
+                          if (valor_question55[i].checked) {
+                            result5 = valor_question55[i].value;
+                            break;
+                          }
+                        }
+                        
+                        const valor_question66 = document.getElementsByName("question6");
+                        for (let i = 0; i < valor_question66.length; i++) {
+                          if (valor_question66[i].checked) {
+                            result6 = valor_question66[i].value;
+                            break;
+                          }
+                        }
+                        
+                        const valor_question77 = document.getElementsByName("question7");
+                        for (let i = 0; i < valor_question77.length; i++) {
+                          if (valor_question77[i].checked) {
+                            result7 = valor_question77[i].value;
+                            break;
+                          }
+                        }
+                        
+                        const valor_question88 = document.getElementsByName("question8");
+                        for (let i = 0; i < valor_question88.length; i++) {
+                          if (valor_question88[i].checked) {
+                            result8 = valor_question88[i].value;
+                            break;
+                          }
+                        }
+                        
+                        const valor_question99 = document.getElementsByName("question9");
+                        for (let i = 0; i < valor_question99.length; i++) {
+                          if (valor_question99[i].checked) {
+                            result9 = valor_question99[i].value;
+                            break;
+                          }
+                        }
+                        
+                        const valor_question100 = document.getElementsByName("question10");
+                        for (let i = 0; i < valor_question100.length; i++) {
+                          if (valor_question100[i].checked) {
+                            result10 = valor_question100[i].value;
+                            break;
+                          }
+                        }
+                        
+                        const valor_question111 = document.getElementsByName("question11");
+                        for (let i = 0; i < valor_question111.length; i++) {
+                          if (valor_question111[i].checked) {
+                            result11 = valor_question111[i].value;
+                            break;
+                          }
+                        }
+                        
+                        const valor_question112 = document.getElementsByName("question12");
+                        for (let i = 0; i < valor_question112.length; i++) {
+                          if (valor_question112[i].checked) {
+                            result12 = valor_question112[i].value;
+                            break;
+                          }
+                        }
+                        
+                        const valor_question113 = document.getElementsByName("question13");
+                        for (let i = 0; i < valor_question113.length; i++) {
+                          if (valor_question113[i].checked) {
+                            result13 = valor_question113[i].value;
+                            break;
+                          }
+                        }
+                        
+                        const valor_question114 = document.getElementsByName("question14");
+                        for (let i = 0; i < valor_question114.length; i++) {
+                          if (valor_question114[i].checked) {
+                            result14 = valor_question114[i].value;
+                            break;
+                          }
+                        }
+                         
+                        let numberEdad =  parseInt(result3) 
+                                    + parseInt(result4) 
+                                    + parseInt(result5)
+                                    + parseInt(result6)
+                                    + parseInt(result7)
+                                    + parseInt(result8)
+                                    + parseInt(result9)
+                                    + parseInt(result10)
+                                    + parseInt(result11)
+                                    + parseInt(result12)
+                                    + parseInt(result13)
+                                    + parseInt(result14)
+        
+                        // localStorage.setItem('total', numberEdad)
+                        
+                        const formHide = document.getElementById("container_widzard")
+                        formHide.classList.add('dbH')
+    
+                        const formResul = document.getElementById("container-result")
+                        formResul.classList.remove('dbH')
+                        
+                        var mensaje;
+                    
+                        if(numberEdad > 3){
+
+                            console.log(`Tiene un problema`)
+                           mensaje = `Gracias por contarme tus síntomas. Tienes ${numberEdad} puntos y tus respuestas sugieren que probablemente tienes un problema de tiroides, pero por favor habla con tu médico para confirmarlo.`
+                        } else {
+                            console.log(`No tienes problema`)
+                           mensaje = `Gracias por contarme tus síntomas. Tienes ${numberEdad} puntos y tus respuestas sugieren que podrías no tener ningún problema con tu tiroides `
+                        }
+
+                        const elementoResultado = document.getElementById("resultoTotal");
+                        elementoResultado.textContent = mensaje;
+                    
+                        // elementoResultado.innerHTML= `${mensaje}`
+                        document.getElementById(`container-result`).scrollIntoView();
+                        document.getElementById("myForm").reset();
+                     
+                        
+                    }
+                    
+               });
+    
+    
+               const radios = document.querySelectorAll('input[name="agree"]');
+                radios.forEach(radio => {
+                    radio.addEventListener('change', event => {
+                    // Obtener el valor seleccionado
+                    const selectedValue = parseInt(event.target.value);
+                    // console.log(selectedValue)
+    
+                    if(selectedValue === 1) {
+                         window.location.href = `https://proyecto.orange-360.com/web/merckWeb/busca-un-especialista/`;
+                        
+                    }else {
+                   
+                        document.getElementById("myForm").reset();
+           
+                        const formResul = document.getElementById("container-result")
+                        formResul.classList.add('dbH')
+    
+                        const formHide = document.getElementById("container_widzard")
+                        formHide.classList.remove('dbH')
+                    }
+    
+                    });
+                });
+    
+        </script>
+</body>
+</html>
